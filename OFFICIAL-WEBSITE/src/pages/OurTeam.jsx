@@ -11,7 +11,7 @@ export default function OurTeam() {
   
   return (
     <div className="w-full">
-        <section className='hero-image relative'>
+        <section className='hero-image container mx-auto relative'>
             <img src={TeamImage} alt="team" className="w-full h-[650px] object-cover"/>
             <h1 className="lg:text-[60px] text-[36px] font-medium text-center absolute left-[80px] text-white top-[390px]">
                 On the other hand, <br/>
