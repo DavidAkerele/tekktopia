@@ -10,7 +10,9 @@ export default function Member({member}) {
                     <h3 className='text-gray-500'>{member.role}</h3>
                     <h2>{member.name}</h2>     
                 </div>
-                <FaLinkedin className="text-[#B0610F] text-2xl ml-auto "/>
+                <a className='ml-auto' href={member.linkedIn} target='_blank'>
+                  <FaLinkedin className="text-[#B0610F] text-2xl "/>
+                </a>                
             </div>                                        
         </div>                                    
     </div>
