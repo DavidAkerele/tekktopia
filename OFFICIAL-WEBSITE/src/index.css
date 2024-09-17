@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer > * {
+    font-size: clamp(10px, 1vw, 2rem);
+}
+
+.name {
+    font-size: clamp(10px, 1vw 30px)
+}
+
+.heading {
+    font-size: clamp(10px, 1vw 16px)
+}
+
+.logo {
+    width: clamp(10px, 1vw 16px);
+}
