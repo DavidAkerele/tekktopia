@@ -1,60 +1,117 @@
 export default function Footer() {
+  const companyLinks = [
+    { text: "About Us", href: "#" },
+    { text: "Services", href: "#" },
+    { text: "Our Project", href: "#" },
+    { text: "Blog", href: "#" },
+  ];
+
+  const productLinks = [{ text: "Let's Gidi", href: "#" }];
+
+  const socialLinks = [
+    { text: "LinkedIn", href: "#" },
+    { text: "Facebook", href: "#" },
+    { text: "Instagram", href: "#" },
+    { text: "Twitter", href: "#" },
+  ];
+
+  const contactInfo = [
+    { text: "+2340220202020" },
+    { text: "+2340220202020" },
+    { text: "message@techtopia.com" },
+  ];
+
   return (
-    <footer className="bg-[#081527] lg:h-[456px] px-16 w-full relative bottom-0 text-white flex flex-col gap-8 items-center justify-center">
-      <section className="w-full max-w-screen-2xl lg:flex grid grid-cols-2 gap-x-6 lg:gap-24">
-        <div className="flex flex-col gap-2 lg:border-none lg:py-0 py-6">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="tekktopia" />
-            <p className="text-[30px]">
+    <footer className="footer bg-[#081527] py-8 text-white flex flex-col gap-8 items-center absolute bottom-0 w-full justify-center px-4">
+      <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 w-full max-w-screen-2xl gap-6 lg:gap-8">
+        {/* Logo and Address */}
+        <div className="flex flex-col gap-2 text-center lg:text-left">
+          <a
+            href="/"
+            className="flex items-center gap-2 justify-center lg:justify-start"
+          >
+            <img src="/logo.png" alt="tekktopia" className="w-8 h-8" />
+            <p className="name text-xl">
               <span className="text-[#F5901F]">t</span>ekk
               <span className="text-[#137CC6]">t</span>opia
             </p>
-          </div>
-          <p>Lagos:</p>
+          </a>
+          <p className="mt-2">Lagos:</p>
           <p>
-            43, Baale Street, Idado Estate, Igbo-Efon,<br />
-            Off Lekki - Epe Expressway, Lagos State,<br /> 
+            43, Baale Street, Idado Estate, Igbo-Efon,
+            <br />
+            Off Lekki - Epe Expressway, Lagos State,
+            <br />
             Nigeria.
           </p>
         </div>
-        <div className="flex flex-col gap-[24px] lg:border-none lg:py-0 py-6">
-          <p className="font-bold">Company</p>
-          <div className="space-y-2">
-            <p>About Us</p>
-            <p>Services</p>
-            <p>About Us</p>
-            <p>Our Project</p>
-            <p>Blog</p>
+
+        {/* Company Links */}
+        <div className="flex flex-col gap-4 items-center lg:items-start">
+          <p className="heading font-bold text-lg">Company</p>
+          <div className="flex flex-col space-y-2">
+            {companyLinks.map((link) => (
+              <a
+                key={link.text}
+                href={link.href}
+                className="hover:text-gray-300"
+              >
+                {link.text}
+              </a>
+            ))}
           </div>
         </div>
-        <div className="flex flex-col gap-[24px] lg:border-none]">
-          <p className="font-bold">Products</p>
-          <p>Let&apos;s Gidi</p>
+
+        {/* Product Links */}
+        <div className="flex flex-col gap-4 items-center lg:items-start">
+          <p className="heading font-bold text-lg">Products</p>
+          {productLinks.map((link) => (
+            <a key={link.text} href={link.href} className="hover:text-gray-300">
+              {link.text}
+            </a>
+          ))}
         </div>
-        <div className="flex flex-col gap-[24px] lg:border-none lg:py-0 py-6">
-          <p className="font-bold">Stay Connected</p>
-          <div className="space-y-2">
-            <p>LinkedIn</p>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Twitter</p>
+
+        {/* Social Links */}
+        <div className="flex flex-col gap-4 items-center lg:items-start">
+          <p className="heading font-bold text-lg">Stay Connected</p>
+          <div className="flex flex-col space-y-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.text}
+                href={link.href}
+                className="hover:text-gray-300"
+              >
+                {link.text}
+              </a>
+            ))}
           </div>
         </div>
-        <div className="flex flex-col gap-[24px] lg:border-none lg:py-0 py-6 -mt-32 lg:mt-0">
-          <p className="font-bold">Reach Us</p>
+
+        {/* Contact Info */}
+        <div className="flex flex-col gap-4 items-center lg:items-start">
+          <p className="heading font-bold text-lg">Reach Us</p>
           <div className="space-y-2">
-            <p>+2340220202020</p>
-            <p>+2340220202020</p>
-            <p>message@techtopia.com</p>
+            {contactInfo.map((info, index) => (
+              <p key={index}>{info.text}</p>
+            ))}
           </div>
         </div>
       </section>
-      <section className="w-full max-w-screen-2xl flex flex-col lg:flex-row lg:gap-48 lg:items-center justify-between mx-auto">
+
+      {/* Bottom Section */}
+      <section className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-48">
         <p>© 2024 All Rights Reserved</p>
-        <div className="flex gap-8">
-          <p>Terms & Condition</p>
-          <p>Privacy Policy</p>
-          <p>FAQs</p>
+        <div className="flex gap-4">
+          {[
+            { text: "Terms & Conditions", href: "#" },
+            { text: "Privacy Policy", href: "#" },
+            { text: "FAQs", href: "#" },
+          ].map((link) => (
+            <a key={link.text} href={link.href} className="hover:text-gray-300">
+              {link.text}
+            </a>
+          ))}
         </div>
       </section>
     </footer>
