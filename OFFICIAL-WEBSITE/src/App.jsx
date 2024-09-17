@@ -4,12 +4,12 @@ import Navbar from "./components/Navbar"
 function App() {
 
   return (
-    <div className="">
+    <div className="relative h-[3000px]">
     <Navbar />
-    <main className="relative flex flex-col w-full">
+    <main className=" flex flex-col w-full mt-48">
       <Outlet/>
-      <Footer/>
     </main>
+      <Footer/>
     </div>
   )
 }

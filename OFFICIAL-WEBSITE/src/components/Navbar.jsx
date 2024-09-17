@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#FCFDFF] border-b p-4">
-      <div className=" px-2 sm:px-6 lg:px-8">
+    <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full">
+      <div className=" px-2 sm:px-6 lg:px-8 w-full flex-grow">
         <div className="relative flex items-center justify-between h-16">
           
           {/* Left section: Logo */}
