@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#081527] h-[456px] w-full fixed bottom-0 text-white flex flex-col gap-8 items-center justify-center">
-      <section className="w-full max-w-screen-2xl flex gap-36">
-        <div className="flex flex-col gap-2">
+    <footer className="bg-[#081527] h-[456px] px-16 w-full relative bottom-0 text-white flex flex-col gap-8 items-center justify-center">
+      <section className="w-full max-w-screen-2xl flex gap-24">
+        <div className="flex flex-col gap-2 ">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="tekktopia" />
             <p className="text-[30px]">
@@ -11,11 +11,11 @@ export default function Footer() {
             </p>
           </div>
           <p>Lagos:</p>
-          <pre>
+          <p>
             43, Baale Street, Idado Estate, Igbo-Efon,<br />
             Off Lekki - Epe Expressway, Lagos State,<br /> 
             Nigeria.
-          </pre>
+          </p>
         </div>
         <div className="flex flex-col gap-[24px]">
           <p className="text-[16px]">Company</p>

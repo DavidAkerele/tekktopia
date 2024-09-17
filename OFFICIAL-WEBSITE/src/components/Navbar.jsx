@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#FCFDFF] border-b p-4">
+    <nav className="bg-[#FCFDFF] border-b p-4 z-40 relative w-full">
       <div className=" px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           
@@ -48,13 +48,13 @@ const Navbar = () => {
                   Our Project
                 </a>
                 <a
-                  href="#"
+                  href="/ContactUs"
                   className="text-[#000000]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Blog
                 </a>
                 <a
-                  href="#"
+                  href="/OurTeam"
                   className="text-[#000000]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Our Team
@@ -149,7 +149,7 @@ const Navbar = () => {
               Blog
             </a>
             <a
-              href="#"
+              href="/OurTeam"
               className="text-[#000000] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Our Team

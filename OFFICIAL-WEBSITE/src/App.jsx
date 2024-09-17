@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="">
     <Navbar />
-    <main className="relative flex flex-col w-full">
+    <main className="relative flex flex-col z-0 w-full">
       <Outlet/>
       <Footer/>
     </main>
