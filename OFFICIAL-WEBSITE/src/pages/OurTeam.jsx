@@ -23,12 +23,12 @@ export default function OurTeam() {
                     <img src={ourTeamImage4} alt="team" className="w-1/3 h-100 filter grayscale object-cover"/>
                 </div>
             </div>
-            <div className='top-[220px] left-[728px] absolute flex flex-col items-center'>
+            {/* <div className='top-[220px] left-[728px] absolute flex flex-col items-center'>
                 <h2 className="text-4xl text-center mb-2 font-md">
                     Our Team Members
                 </h2>
                 <img src={yellowLine} alt="team" className="flex w-1/2 h-100"/>
-            </div>
+            </div> */}
         </section>  
     </div>
   )
