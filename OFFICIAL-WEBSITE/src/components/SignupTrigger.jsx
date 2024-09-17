@@ -6,7 +6,7 @@ export default function SignupTrigger() {
         className=" mx-auto bg-cover bg-center h-[300px]"
         style={{ backgroundImage: `url(${blueRect})` }}
       >
-        <div className="p-16 text-center text-white w-3/4 mx-auto">
+        <div className="p-16 text-center text-white container w-3/4 mx-auto">
           <h2 className="text-[30px] font-500 ">
             To take a trivial example, which of us ever undertakes laborious
             physical exercise

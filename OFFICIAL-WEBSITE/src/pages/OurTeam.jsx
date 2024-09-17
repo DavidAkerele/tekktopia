@@ -18,7 +18,7 @@ export default function OurTeam() {
                 we denounce with.
             </h1>
         </section>      
-        <section className="mx-auto p-16 ">
+        <section className="container mx-auto p-16 ">
             <div className='relative flex'>
                 <div className="flex flex-col gap-4 justify-start w-3/4">
                     <img src={ourTeamImage1} alt="team" className="w-1/2 h-100 justify-start filter grayscale object-cover col-6"/>
@@ -43,7 +43,7 @@ export default function OurTeam() {
                 </div>
             </div>
         </section>  
-        <section className=" mx-auto p-16">
+        <section className="container mx-auto p-16">
                 <div className='flex flex-col items-center'>
                     <h2 className="text-3xl font-medium">
                         Driving Innovation, Building Prosperity
