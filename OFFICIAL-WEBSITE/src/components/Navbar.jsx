@@ -32,7 +32,7 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <button className="bg-[#070223] flex items-center text-[#6797D5] px-4 py-2 rounded-md text-sm font-medium">
+          <button className="bg-[#070223] hover:bg-blue-500 flex items-center text-[#6797D5] hover:text-white px-4 py-2 rounded-md text-sm font-medium">
             Connect with us <FiChevronRight />
           </button>
         </div>
