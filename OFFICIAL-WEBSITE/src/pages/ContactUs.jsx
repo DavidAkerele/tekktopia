@@ -1,8 +1,12 @@
 import contactUsImage from "../assets/images/contactUsImage.png";
 import yellowLine from "../assets/images/yellowLine.png";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import Map from "../components/Map";
+import Form from "../components/Form";
 
+// ContactUs component
 export default function ContactUs() {
+  // Array containing contact information
   const contactLinks = [
     {
       icon: "FaPhone",
@@ -20,6 +24,7 @@ export default function ContactUs() {
       info: "1234567890",
     },
   ];
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -34,6 +39,7 @@ export default function ContactUs() {
           Ensuring Tomorrow&apos;s Success
         </h1>
       </section>
+
       {/* Contact Info Section */}
       <section className="relative w-full p-10">
         <div className="w-full flex flex-col w-full lg:w-1/2 items-start">
@@ -53,6 +59,7 @@ export default function ContactUs() {
         </div>
         <div className="flex gap-4 lg:gap-16 mt-8 w-full">
           {contactLinks.map((contactLink, index) => (
+            // Contact link item
             <div key={index} className="flex gap-2 lg:gap-8 items-center">
               {contactLink.icon === "FaPhone" && (
                 <FaPhone className="text-[#B0610F] text-xl rotate-90" />
@@ -64,12 +71,24 @@ export default function ContactUs() {
                 <FaEnvelope className="text-[#B0610F] text-xl" />
               )}
               <div className="flex flex-col gap-1">
-                <h4 className="text-xs lg:text-sm font-bold">{contactLink.title}</h4>
+                <h4 className="text-xs lg:text-sm font-bold">
+                  {contactLink.title}
+                </h4>
                 <p>{contactLink.info}</p>
               </div>
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="relative w-full z-0">
+        <Map />
+      </section>
+
+      {/* Form Section */}
+      <section className="relative w-full h-[450px] sm:h-[650px] p-20">
+        <Form />
       </section>
     </div>
   );
