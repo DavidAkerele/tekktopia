@@ -24,7 +24,7 @@ export default function Form() {
 
   return (
     // Form container
-    <form className="w-full lg:w-1/2 flex flex-col bg-[#253141] gap-4 mx-auto -mt-32 h-[461px] rounded-lg p-12">
+    <form className="w-full max-w-2xl lg:w-1/2 flex flex-col bg-[#253141] gap-4 mx-auto -mt-32 h-[461px] rounded-lg p-12">
       {/* Form title */}
       <h2 className="text-2xl sm:text-3xl text-white mx-2 font-medium">
         Connect with us
