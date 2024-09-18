@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: "Our Project", href: "/projects" },
     { name: "Blog", href: "/blog" },
     { name: "Our Team", href: "/our-team" },
-    { name: "Connect with us", href: "#", isButton: true } // Button item
+    { name: "Connect with us", href: "/contact-us", isButton: true } // Button item
   ];
 
   return (
