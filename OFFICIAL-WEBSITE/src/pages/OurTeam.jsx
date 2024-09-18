@@ -11,6 +11,7 @@ export default function OurTeam() {
   
   return (
     <div className="w-full">
+        {/* Hero section with background image and title */}
         <section className='hero-image container mx-auto relative'>
             <img src={TeamImage} alt="team" className="w-full h-[650px] object-cover"/>
             <h1 className="lg:text-[60px] text-[36px] font-medium text-center absolute left-[80px] text-white top-[390px]">
@@ -18,6 +19,8 @@ export default function OurTeam() {
                 we denounce with.
             </h1>
         </section>      
+
+        {/* Section showcasing team images and description */}
         <section className="container mx-auto p-16 ">
             <div className='relative flex'>
                 <div className="flex flex-col gap-4 justify-start w-3/4">
@@ -43,15 +46,19 @@ export default function OurTeam() {
                 </div>
             </div>
         </section>  
+
+        {/* Section highlighting the team's mission and values */}
         <section className="container mx-auto p-16">
-                <div className='flex flex-col items-center'>
-                    <h2 className="text-3xl font-medium">
-                        Driving Innovation, Building Prosperity
-                    </h2>
-                    <img src={yellowLine} alt="team" className="w-1/4 h-[3px] my-8"/>
-                    <TeamMembers/>              
-                </div>
+            <div className='flex flex-col items-center'>
+                <h2 className="text-3xl font-medium">
+                    Driving Innovation, Building Prosperity
+                </h2>
+                <img src={yellowLine} alt="team" className="w-1/4 h-[3px] my-8"/>
+                <TeamMembers/>              
+            </div>
         </section>
+
+        {/* Signup trigger component */}
         <SignupTrigger/>
     </div>
   )

@@ -25,7 +25,7 @@ const Navbar = () => {
             {["Home", "About", "Services", "Our Project", "Blog", "Our Team"].map((item) => (
               <a
                 key={item}
-                href="#"
+                href={item.replace(" ", "")}
                 className="text-[#000000] hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium"
               >
                 {item}
