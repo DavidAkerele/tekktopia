@@ -22,8 +22,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="footer bg-[#081527] py-8 text-white flex flex-col gap-8 items-center absolute bottom-0 w-full justify-center px-4">
-      <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 w-full max-w-screen-2xl gap-6 lg:gap-8">
+    <footer className="footer bg-[#081527] py-8 text-white bottom-0 flex flex-col gap-8 items-center w-full justify-center px-4">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full max-w-screen-2xl gap-6 lg:gap-8">
         {/* Logo and Address */}
         <div className="flex flex-col gap-2 text-center lg:text-left">
           <a
@@ -37,13 +37,13 @@ export default function Footer() {
             </p>
           </a>
           <p className="mt-2">Lagos:</p>
-          <p>
+          <address className="not-italic">
             43, Baale Street, Idado Estate, Igbo-Efon,
             <br />
             Off Lekki - Epe Expressway, Lagos State,
             <br />
             Nigeria.
-          </p>
+          </address>
         </div>
 
         {/* Company Links */}
@@ -99,8 +99,9 @@ export default function Footer() {
         </div>
       </section>
 
+
       {/* Bottom Section */}
-      <section className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-48">
+      <section className="w-full max-w-screen-2xl flex flex-col  lg:flex-row items-center justify-between gap-4">
         <p>© 2024 All Rights Reserved</p>
         <div className="flex gap-4">
           {[
