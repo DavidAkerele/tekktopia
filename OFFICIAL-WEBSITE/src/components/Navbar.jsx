@@ -4,7 +4,7 @@ import { FiChevronRight } from "react-icons/fi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Array of nav items with name and href
+  // Array of nav items with name, href, and optional isButton flag
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -12,12 +12,12 @@ const Navbar = () => {
     { name: "Our Project", href: "/projects" },
     { name: "Blog", href: "/blog" },
     { name: "Our Team", href: "/our-team" },
-    { name: "Connect with us", href: "#", isButton: true } // Added button item
+    { name: "Connect with us", href: "#", isButton: true } // Button item
   ];
 
   return (
     <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-10">
-      <div className="px-2 sm:px-6 lg:px-8 w-full flex items-center justify-between h-16">
+      <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         
         {/* Left section: Logo */}
         <div className="flex-shrink-0 flex items-center ml-8">
@@ -34,23 +34,18 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center gap-5 mr-10">
           <div className="flex gap-4">
             {navItems.map((item) => (
-              item.isButton ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="bg-[#070223] hover:bg-blue-500 flex items-center text-[#6797D5] hover:text-white px-4 py-2 rounded-md text-sm font-medium"
-                >
-                  {item.name} <FiChevronRight />
-                </a>
-              ) : (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-[#000000] hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  {item.name}
-                </a>
-              )
+              <a
+                key={item.name}
+                href={item.href}
+                className={`${
+                  item.isButton
+                    ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
+                    : "text-[#000000] hover:text-blue-500 px-3 py-2"
+                } rounded-md text-sm font-medium flex items-center`}
+              >
+                {item.name}
+                {item.isButton && <FiChevronRight className="ml-2" />}
+              </a>
             ))}
           </div>
         </div>
@@ -78,25 +73,20 @@ const Navbar = () => {
 
       {/* Mobile menu, show/hide based on menu state */}
       {isOpen && (
-        <div className="sm:hidden px-2 pt-2 pb-3 space-y-1" id="mobile-menu">
+        <div className="sm:hidden px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => (
-            item.isButton ? (
-              <a
-                key={item.name}
-                href={item.href}
-                className="bg-[#070223] hover:bg-blue-500 flex items-center text-[#6797D5] hover:text-white px-4 py-2 rounded-md text-base font-medium block"
-              >
-                {item.name} <FiChevronRight />
-              </a>
-            ) : (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-[#000000] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item.name}
-              </a>
-            )
+            <a
+              key={item.name}
+              href={item.href}
+              className={`${
+                item.isButton
+                  ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
+                  : "text-[#000000] hover:bg-gray-700 hover:text-white px-3 py-2"
+              } block rounded-md text-base font-medium flex items-center`}
+            >
+              {item.name}
+              {item.isButton && <FiChevronRight className="ml-2" />}
+            </a>
           ))}
         </div>
       )}

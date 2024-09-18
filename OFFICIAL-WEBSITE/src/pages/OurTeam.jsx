@@ -13,26 +13,30 @@ export default function OurTeam() {
 
   return (
     <div className="w-full">
-      {/* Hero section */}
-      <section className="hero-image container mx-auto relative">
-        <img src={TeamImage} alt="team" className="w-full h-[450px] sm:h-[650px] object-cover" />
-        <h1 className="text-[24px] sm:text-[36px] lg:text-[60px] font-medium text-center absolute left-4 sm:left-[80px] text-white top-[200px] sm:top-[390px] z-2">
+      {/* Hero Section */}
+      <section className="relative w-full">
+        <img 
+          src={TeamImage} 
+          alt="team" 
+          className="w-full h-[450px] sm:h-[650px] object-cover" 
+        />
+        <h1 className="absolute text-white text-center z-10 left-4 sm:left-[80px] top-[200px] sm:top-[390px] font-medium text-[24px] sm:text-[36px] lg:text-[60px]">
           On the other hand, <br />
           we denounce with.
         </h1>
       </section>
 
       {/* Our Team Section */}
-      <section className="container mx-auto p-8 sm:p-16">
-        <div className="relative flex flex-col lg:flex-row gap-6">
-          {/* Left side images */}
-          <div className="flex flex-col gap-4 justify-start w-full lg:w-3/4">
-            <img
-              src={ourTeamImage1}
-              alt="team"
-              className="w-full lg:w-1/2 h-64 sm:h-auto filter grayscale object-cover"
+      <section className="container mx-auto p-8 sm:p-16 relative">
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Left Side: Images */}
+          <div className="flex flex-col gap-4 w-full lg:w-3/4">
+            <img 
+              src={ourTeamImage1} 
+              alt="team" 
+              className="w-full lg:w-1/2 h-64 sm:h-auto filter grayscale object-cover" 
             />
-            <div className="flex flex-wrap lg:flex-nowrap gap-4 lg:gap-6 w-full lg:w-3/4">
+            <div className="flex flex-wrap lg:flex-nowrap gap-4 lg:gap-6">
               {teamImages.map((image, index) => (
                 <img
                   key={index}
@@ -44,8 +48,8 @@ export default function OurTeam() {
             </div>
           </div>
 
-          {/* Right side text */}
-          <div className="flex flex-col lg:absolute top-0 right-0 w-full lg:w-[600px] z-9 lg:top-20">
+          {/* Right Side: Text */}
+          <div className="flex flex-col lg:absolute lg:right-0 w-full lg:w-[600px] lg:top-20">
             <h2 className="text-2xl sm:text-3xl mb-2 font-medium">Our Team Members</h2>
             <img src={yellowLine} alt="yellow line" className="w-1/5 h-[3px]" />
             <p className="text-left text-[14px] text-gray-500 mt-2">
@@ -60,14 +64,12 @@ export default function OurTeam() {
       </section>
 
       {/* Team Members Section */}
-      <section className="container mx-auto p-8 sm:p-16">
-        <div className="flex flex-col items-center">
-          <h2 className="text-2xl sm:text-3xl font-medium text-center">
-            Driving Innovation, Building Prosperity
-          </h2>
-          <img src={yellowLine} alt="yellow line" className="w-1/8 h-[3px] my-4 sm:my-8" />
-          <TeamMembers />
-        </div>
+      <section className="container mx-auto p-8 sm:p-16 flex flex-col items-center">
+        <h2 className="text-2xl sm:text-3xl font-medium text-center">
+          Driving Innovation, Building Prosperity
+        </h2>
+        <img src={yellowLine} alt="yellow line" className="w-1/8 h-[3px] my-4 sm:my-8" />
+        <TeamMembers />
       </section>
 
       {/* Signup Trigger */}
