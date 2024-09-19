@@ -17,3 +17,7 @@
 .logo {
     width: clamp(10px, 1vw 16px);
 }
+
+.hero {
+    font-size: clamp(20px, 3vw, 50px)
+}
