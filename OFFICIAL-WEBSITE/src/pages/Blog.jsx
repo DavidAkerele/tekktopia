@@ -1,13 +1,9 @@
+import Hero from "../components/Hero";
+import blogHeroImage from "/blog-hero.png";
 function Blog() {
   return (
     <div className="w-full h-full flex flex-col gap-16">
-      <picture className="relative w-full h-full">
-        <img src="/blog-hero.png" alt="blog" className="w-full h-full object-cover" />
-        <pre className="absolute bottom-4 md:bottom-20 left-10 text-white font-medium">
-          Building Wealth, <br />
-          Securing Futures
-        </pre>
-      </picture>
+      <Hero imageUrl={blogHeroImage} topText="Building Wealth," bottomText="Securing Futures" />
 
       <h2 className="text-center text-xl font-normal">Latest Articles</h2>
 
