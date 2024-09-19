@@ -1,13 +1,13 @@
 function Blog() {
   return (
     <div className="w-full h-full flex flex-col gap-16">
-      <div className="relative w-full aspect-auto">
+      <picture className="relative w-full aspect-auto h-full">
         <img src={"/blog-hero.png"} alt="blog" className="aspect-auto w-full" />
-        <pre className="absolute bottom-24 left-10 text-white hero font-[500]">
+        <pre className="absolute bottom-4 md:bottom-20 left-10 text-white hero font-[500]">
           Building Wealth, <br />
           Securing Futures
         </pre>
-      </div>
+      </picture>
       <h2 className="text-center text-xl font-[400]">Latest Articles</h2>
       <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center space-y-16 px-8">
         <section className="grid grid-cols-3 gap-4 justify-evenly w-full">
