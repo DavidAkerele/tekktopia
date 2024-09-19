@@ -1,4 +1,5 @@
 export default function Footer() {
+  // Array of links and contact info
   const companyLinks = [
     { text: "About Us", href: "#" },
     { text: "Services", href: "#" },
@@ -22,7 +23,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full absolute bottom-0">
+    <footer className="w-full  bottom-0">
       <section className="relative w-full flex flex-col">
         <img src="/footer.png" alt="footer" className="w-full h-[418px]" />
         <div className="left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-full max-w-6xl px-4 mx-auto absolute text-white gap-4">
