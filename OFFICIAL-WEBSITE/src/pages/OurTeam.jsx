@@ -4,6 +4,7 @@ import ourTeamImage2 from '../assets/images/ourTeamImage2.png';
 import ourTeamImage3 from '../assets/images/ourTeamImage3.png';
 import ourTeamImage4 from '../assets/images/ourTeamImage4.png';
 import yellowLine from '../assets/images/yellowLine.png';
+import Hero from '../components/Hero';
 // import SignupTrigger from '../components/SignupTrigger';
 import TeamMembers from '../components/TeamMembers';
 
@@ -14,17 +15,7 @@ export default function OurTeam() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full">
-        <img 
-          src={TeamImage} 
-          alt="team" 
-          className="w-full h-[450px] sm:h-[650px] object-cover" 
-        />
-        <h1 className="absolute text-white text-center left-4 sm:left-[80px] top-[200px] sm:top-[390px] font-medium text-[24px] sm:text-[36px] lg:text-[60px]">
-          On the other hand, <br />
-          we denounce with.
-        </h1>
-      </section>
+      <Hero imageUrl={TeamImage} topText="On the other hand," bottomText="we denounce with." />
 
       {/* Our Team Section */}
       <section className="container mx-auto p-8 sm:p-16 relative">
