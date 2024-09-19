@@ -48,12 +48,12 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/tekktopia-website.git
+   git clone https://github.com/Tekktopia-Ltd/OFFICIAL-WEBSITE.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd tekktopia-website
+   cd OFFICIAL-WEBSITE
    ```
 
 3. **Install dependencies**:
