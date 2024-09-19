@@ -5,7 +5,6 @@
 
 # Tekktopia Company Website
 
-![Tekktopia Logo](./path_to_logo/tekktopia.png)
 
 Welcome to the **Tekktopia** company website project! This project is designed and built with modern web technologies to showcase the services, values, and offerings of Tekktopia, a cutting-edge tech company. The project is developed using **React** and **Tailwind CSS**, ensuring a fast, responsive, and interactive user experience.
 
