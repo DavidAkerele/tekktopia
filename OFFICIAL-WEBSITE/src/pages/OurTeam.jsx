@@ -4,7 +4,7 @@ import ourTeamImage2 from '../assets/images/ourTeamImage2.png';
 import ourTeamImage3 from '../assets/images/ourTeamImage3.png';
 import ourTeamImage4 from '../assets/images/ourTeamImage4.png';
 import yellowLine from '../assets/images/yellowLine.png';
-import SignupTrigger from '../components/SignupTrigger';
+// import SignupTrigger from '../components/SignupTrigger';
 import TeamMembers from '../components/TeamMembers';
 
 export default function OurTeam() {
@@ -73,7 +73,7 @@ export default function OurTeam() {
       </section>
 
       {/* Signup Trigger */}
-      <SignupTrigger />
+      {/* <SignupTrigger /> */}
     </div>
   );
 }
