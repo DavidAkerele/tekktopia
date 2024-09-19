@@ -3,6 +3,7 @@ import yellowLine from "../assets/images/yellowLine.png";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Map from "../components/Map";
 import Form from "../components/Form";
+import Hero from "../components/Hero";
 
 // ContactUs component
 export default function ContactUs() {
@@ -28,17 +29,7 @@ export default function ContactUs() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full">
-        <img
-          src={contactUsImage}
-          alt="team"
-          className="w-full h-[450px] sm:h-[650px] object-cover"
-        />
-        <h1 className="absolute text-white text-left left-4 sm:left-[80px] top-[200px] sm:top-[390px] font-medium text-[24px] sm:text-[36px] lg:text-[60px]">
-          Creating Prosperity, <br />
-          Ensuring Tomorrow&apos;s Success
-        </h1>
-      </section>
+      <Hero imageUrl={contactUsImage} topText="Creating Prosperity," bottomText="Ensuring Tomorrow's Success" />
 
       {/* Contact Info Section */}
       <section className="relative w-full p-10">
