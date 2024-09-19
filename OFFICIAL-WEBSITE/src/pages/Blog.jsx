@@ -9,7 +9,7 @@ function Blog() {
         </pre>
       </div>
       <h2 className="text-center text-xl font-[400]">Latest Articles</h2>
-      <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center space-y-16">
+      <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center space-y-16 px-8">
         <section className="grid grid-cols-3 gap-4 justify-evenly w-full">
           <div className="w-full space-y-2">
             <img src={"/article1.png"} alt="blog" className="object-cover" />
