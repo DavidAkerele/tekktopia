@@ -42,7 +42,7 @@ export default function ContactUs() {
 
       {/* Contact Info Section */}
       <section className="relative w-full p-10">
-        <div className="w-full flex flex-col w-full lg:w-1/2 items-start">
+        <div className="w-full flex flex-col  lg:w-1/2 items-start">
           <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
             Contact Information
           </h2>
