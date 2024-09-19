@@ -65,7 +65,7 @@ export default function Form() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="w-full max-w-lg md:max-w-2xl flex flex-col bg-[#253141] gap-4 mx-auto mt-8 p-6 sm:p-12 rounded-lg"
+      className="w-full lg:max-w-2xl lg:w-1/2 flex flex-col bg-[#253141] gap-4 mx-auto -mt-32 h-[461px] rounded-lg p-6 lg:p-12"
     >
       {/* Form title */}
       <h2 className="text-2xl sm:text-3xl text-white font-medium">
@@ -100,9 +100,9 @@ export default function Form() {
         placeholder="Write your request"
         name="message"
       />
-      <div className="flex items-center">
+      <div className="flex items-center flex-col lg:flex-row">
         {/* Submit button */}
-        <button type="submit" className="ml-0 bg-[#F5901F] w-1/2 sm:w-1/4 text-white text-sm p-2 py-3 rounded-lg flex items-center gap-2">
+        <button type="submit" className="ml-0 bg-[#F5901F] w-full text-center lg:w-1/4 text-white text-xs p-2 py-3 text-xs rounded-lg flex items-center gap-2">
           Send Message
           <MdArrowForward className="ml-auto" />
         </button>

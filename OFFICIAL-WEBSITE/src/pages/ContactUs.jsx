@@ -47,7 +47,7 @@ export default function ContactUs() {
             Contact Information
           </h2>
           <img src={yellowLine} alt="yellow line" className="w-1/4 h-[3px]" />
-          <p className="text-left text-[14px] mt-2">
+          <p className="text-left text-xs lg:text-[14px] mt-2">
             But I must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
             account of the system, and expound the actual teachings of the great
@@ -57,7 +57,7 @@ export default function ContactUs() {
             rationally encounter consequences that are extremely painful.
           </p>
         </div>
-        <div className="flex gap-4 lg:gap-16 mt-8 w-full">
+        <div className="flex gap-4 lg:gap-16 flex-col lg:flex-row mt-8 w-full">
           {contactLinks.map((contactLink, index) => (
             // Contact link item
             <div key={index} className="flex gap-2 lg:gap-8 items-center">
@@ -87,7 +87,7 @@ export default function ContactUs() {
       </section>
 
       {/* Form Section */}
-      <section className="relative w-full h-[450px] sm:h-[650px] p-20">
+      <section className="relative w-full h-[450px] sm:h-[650px] py-20 px-6">
         <Form />
       </section>
     </div>
