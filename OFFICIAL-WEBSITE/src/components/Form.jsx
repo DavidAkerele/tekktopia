@@ -10,26 +10,37 @@ export default function Form() {
       icon: <MdPerson className="text-gray-500 lg:text-2xl" />,
       placeholder: "First Name",
       name: "first_name",
+      type: "text"
     },
     {
       icon: <MdPerson className="text-gray-500 lg:text-2xl" />,
       placeholder: "Last Name",
       name: "last_name",
+      type: "text"
     },
     {
       icon: <MdPhone className="text-gray-500 lg:text-2xl" />,
       placeholder: "Phone Number",
       name: "user_phone",
+      type: "tel"
     },
     {
       icon: <MdMail className="text-gray-500 lg:text-2xl" />,
       placeholder: "Email",
       name: "user_email",
+      type: "email"
     },
   ];
 
   const form = useRef();
   const [emailSent, setEmailSent] = useState("");
+
+  // Function to handle input validation for phone number
+  const handlePhoneInput = (e) => {
+    const value = e.target.value;
+    // Remove any non-numeric characters
+    e.target.value = value.replace(/\D/g, '');
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -60,7 +71,6 @@ export default function Form() {
       <h2 className="text-2xl sm:text-3xl text-white mx-2 font-medium">
         Connect with us
       </h2>
-
       {/* Input fields */}
       <div className="grid grid-cols-2 gap-4">
         {inputContent.map((item, index) => (
@@ -77,6 +87,8 @@ export default function Form() {
               key={index}
               className="outline-0 w-2/3 lg:text-sm text-xs"
               name={item.name}
+              type={item.type}
+              onInput={item.type === 'tel' ? handlePhoneInput : null}  //Ensuring only numbers are allowed in phone number field
               required
             />
           </div>
