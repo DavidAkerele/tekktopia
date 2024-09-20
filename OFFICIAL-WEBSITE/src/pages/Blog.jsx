@@ -1,5 +1,7 @@
 import Hero from "../components/Hero";
 import blogHeroImage from "/blog-hero.png";
+import SignUpTrigger from "../components/SignUpTrigger";
+
 function Blog() {
   return (
     <div className="w-full h-full flex flex-col gap-16">
@@ -36,6 +38,7 @@ function Blog() {
           ))}
         </section>
       </div>
+      <SignUpTrigger />
     </div>
   );
 }

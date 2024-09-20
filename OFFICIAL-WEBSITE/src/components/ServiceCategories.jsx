@@ -50,8 +50,8 @@ export default function ServiceCategories() {
     ],
   ];
   return (
-    <div className="service-categories mt-12 flex h-full gap-4">
-      <div className="w-1/3 grid grid-cols-1 gap-4">
+    <div className="service-categories mt-12 flex-col lg:flex-row flex h-full gap-4">
+      <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
         {
           serviceCategories[0].map((serviceCategory, index) => (
             <ServiceCategory
@@ -64,7 +64,7 @@ export default function ServiceCategories() {
           ))
         }
       </div>
-      <div className="w-1/3">
+      <div className="lg:w-1/3">
         {
           serviceCategories[1].map((serviceCategory, index) => (
             <ServiceCategory
@@ -77,7 +77,7 @@ export default function ServiceCategories() {
           ))
         }
       </div>
-      <div className="w-1/3 grid grid-cols-1 gap-4">
+      <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
         {
           serviceCategories[2].map((serviceCategory, index) => (
             <ServiceCategory
