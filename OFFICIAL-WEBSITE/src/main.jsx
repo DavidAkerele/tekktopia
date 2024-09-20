@@ -6,12 +6,14 @@ import ContactUs from "./pages/ContactUs";
 import "./index.css";
 import App from "./App";
 import Blog from "./pages/Blog";
+import Services from "./pages/Services";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/contact-us" element={<ContactUs />} />
