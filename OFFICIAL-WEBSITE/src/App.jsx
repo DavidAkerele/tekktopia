@@ -1,6 +1,7 @@
 import Footer from "./components/Footer"
 import { Outlet } from "react-router-dom"
 import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
 import 'leaflet/dist/leaflet.css';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <div className="relative">
     <Navbar />
-    <main className=" flex flex-col w-full ">
+    
+    <main className="min-h-screen flex flex-col w-full ">
       <Outlet/>
     </main>
       <Footer/>

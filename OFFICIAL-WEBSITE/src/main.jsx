@@ -6,6 +6,7 @@ import ContactUs from "./pages/ContactUs";
 import "./index.css";
 import App from "./App";
 import Blog from "./pages/Blog";
+import Home from "./pages/Home";
 import Services from "./pages/Services";
 
 createRoot(document.getElementById("root")).render(
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+        <Route path="/" element={<Home />}/>
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/our-team" element={<OurTeam />} />
