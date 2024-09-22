@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { FiChevronRight } from "react-icons/fi";
 import HeroImage from "../assets/images/home1.png";
 

@@ -5,6 +5,7 @@ import itSupportIcon from "../assets/icons/itSupportIcon.png";
 import softwareDevIcon from "../assets/icons/softwareDevIcon.png";
 
 import ServiceCategory from "./ServiceCategory";
+
 export default function ServiceCategories() {
   const serviceCategories = [
     [
@@ -49,47 +50,25 @@ export default function ServiceCategories() {
       },
     ],
   ];
+
+  // Reusable component to render each category column
+  const renderCategoryColumn = (categoryList) => (
+    <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+      {categoryList.map((serviceCategory, index) => (
+        <ServiceCategory
+          key={index} // index is still used here for a unique key
+          bgColor={serviceCategory.bgColor}
+          icon={serviceCategory.icon}
+          title={serviceCategory.title}
+          description={serviceCategory.description}
+        />
+      ))}
+    </div>
+  );
+
   return (
     <div className="service-categories mt-12 flex-col lg:flex-row flex h-full gap-4">
-      <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-        {
-          serviceCategories[0].map((serviceCategory, index) => (
-            <ServiceCategory
-              key={index}
-              bgColor={serviceCategory.bgColor}
-              icon={serviceCategory.icon}
-              title={serviceCategory.title}
-              description={serviceCategory.description}
-            />
-          ))
-        }
-      </div>
-      <div className="lg:w-1/3">
-        {
-          serviceCategories[1].map((serviceCategory, index) => (
-            <ServiceCategory
-              key={index}
-              bgColor={serviceCategory.bgColor}
-              icon={serviceCategory.icon}
-              title={serviceCategory.title}
-              description={serviceCategory.description}
-            />
-          ))
-        }
-      </div>
-      <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-        {
-          serviceCategories[2].map((serviceCategory, index) => (
-            <ServiceCategory
-              key={index}
-              bgColor={serviceCategory.bgColor}
-              icon={serviceCategory.icon}
-              title={serviceCategory.title}
-              description={serviceCategory.description}
-            />
-          ))
-        }
-      </div>
+      {serviceCategories.map(renderCategoryColumn)}
     </div>
   );
 }
