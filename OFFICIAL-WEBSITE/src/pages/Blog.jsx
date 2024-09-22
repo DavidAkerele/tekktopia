@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import blogHeroImage from "/blog-hero.png";
-import SignUpTrigger from "../components/SignUpTrigger";
+import SignupTrigger from "../components/SignupTrigger";
 
 function Blog() {
   return (
@@ -38,7 +38,7 @@ function Blog() {
           ))}
         </section>
       </div>
-      <SignUpTrigger />
+      <SignupTrigger />
     </div>
   );
 }
