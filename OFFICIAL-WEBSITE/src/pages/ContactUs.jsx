@@ -4,6 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Map from "../components/Map";
 import Form from "../components/Form";
 import Hero from "../components/Hero";
+import SignUpTrigger from "../components/SignUpTrigger";
 
 // ContactUs component
 export default function ContactUs() {
@@ -81,6 +82,7 @@ export default function ContactUs() {
       <section className="relative w-full h-[450px] sm:h-[650px] py-20 px-6">
         <Form />
       </section>
+      <SignUpTrigger/>
     </div>
   );
 }

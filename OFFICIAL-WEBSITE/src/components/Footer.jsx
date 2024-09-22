@@ -23,17 +23,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full mt-32 bottom-0">
-      <section className="relative w-full flex flex-col">
-        <img src="/footer.png" alt="footer" className="w-full h-[418px]" />
-        <div className="left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-full max-w-6xl px-4 mx-auto absolute text-white gap-4">
-        <p className="font-[500] hero text-center">
-          To take a trivial example, which of us ever undertakes laborious
-          physical exercise
-        </p>
-        <p className="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-        </div>
-      </section>
+    <footer className="w-full bottom-0">
       <div className="footer bg-[#081527] py-8 text-white flex flex-col gap-8 items-center w-full justify-center px-4">
         <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 w-full max-w-screen-2xl gap-6 lg:gap-8">
           {/* Logo and Address */}
