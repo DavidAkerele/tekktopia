@@ -2,12 +2,10 @@ import Hero from "../components/Hero";
 import HeroImage from "../assets/images/Team.png";
 import yellowLine from "../assets/images/yellowLine.png";
 import ServiceCategories from "../components/ServiceCategories";
-// <<<<<<< page-services
-import SignupTrigger from "../components/SignUpTrigger";
-// =======
-// import SignUpTrigger from "../components/SignUpTrigger";
-import qualityAssuranceBg from "../assets/images/qualityAssuranceBg.png";
-// >>>>>>> main
+
+import SignupTrigger from "../components/SignupTrigger";
+// import qualityAssuranceBg from "../assets/images/qualityAssuranceBg.png";
+
 
 export default function Services() {
   const signUpRounded = true;
@@ -66,11 +64,7 @@ export default function Services() {
 
       {/*SignUpTrigger Section*/}
       <section className="lg:p-32">
-// <<<<<<< page-services
         <SignupTrigger signUpRounded={signUpRounded} />
-// =======
-//         <SignUpTrigger signUpRounded={signUpRounded}/>
-// >>>>>>> main
       </section>
     </div>
   );
