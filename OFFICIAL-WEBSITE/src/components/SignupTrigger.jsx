@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function SignUpTrigger({ signUpRounded }) {
+export default function SignupTrigger({ signUpRounded }) {
   return (
     <section className={`relative w-full flex flex-col rounded-lg ${signUpRounded? "lg:rounded-lg": ""}`}>
       <img src="/footer.png" alt="footer" className={`w-full h-[418px] ${signUpRounded? "lg:rounded-lg": ""}`} />
@@ -19,6 +19,6 @@ export default function SignUpTrigger({ signUpRounded }) {
   );
 }
 
-SignUpTrigger.propTypes = {
+SignupTrigger.propTypes = {
   signUpRounded: PropTypes.bool
 }
