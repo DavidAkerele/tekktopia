@@ -16,8 +16,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-10">
-      <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-10 flex justify-center">
+      <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between h-16 container">
         
         {/* Left section: Logo */}
         <div className="flex-shrink-0 flex items-center ml-8">

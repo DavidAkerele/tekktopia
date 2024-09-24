@@ -10,7 +10,7 @@ import SignupTrigger from "../components/SignupTrigger";
 export default function Services() {
   const signUpRounded = true;
   return (
-    <div className="w-full">
+    <div className="w-full container">
       {/* Hero Section */}
       <Hero
         imageUrl={HeroImage}

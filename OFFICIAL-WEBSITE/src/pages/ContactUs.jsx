@@ -28,7 +28,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full container">
       {/* Hero Section */}
       <Hero imageUrl={contactUsImage} topText="Creating Prosperity," bottomText="Ensuring Tomorrow's Success" />
 
