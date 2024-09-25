@@ -30,7 +30,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Right section: Menu and Button */}
+        {/* Right section: Desktop Menu and Button */}
         <div className="hidden sm:flex items-center gap-5 mr-10">
           <div className="flex gap-4">
             {navItems.map((item) => (
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu button */}
-        <div className="absolute inset-y-0 right-0 ml-4 flex items-center sm:hidden">
+        <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
