@@ -5,7 +5,7 @@ export default function Footer() {
     { text: "Services", href: "#" },
     { text: "Our Project", href: "#" },
     { text: "Blog", href: "#" },
-  ];
+  ]; 
 
   const productLinks = [{ text: "Let's Gidi", href: "#" }];
 
@@ -17,14 +17,14 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { text: "+2340220202020" },
-    { text: "+2340220202020" },
-    { text: "message@techtopia.com" },
+    { text: "+234 809 414 0706" },
+    { text: "+234 902 254 2963" },
+    { text: "tekktopia@gmail.com" },
   ];
 
   return (
-    <footer className="w-full bottom-0">
-      <div className="footer bg-[#081527] py-8 text-white flex flex-col gap-8 items-center w-full justify-center px-4">
+    <footer className="w-full bottom-0 footer bg-[#081527] lg:px-6">
+      <div className="footer bg-[#081527] container mx-auto py-8 text-white flex flex-col gap-8 items-center w-full justify-center px-4">
         <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 w-full max-w-screen-2xl gap-6 lg:gap-8">
           {/* Logo and Address */}
           <div className="flex flex-col gap-2 text-center lg:text-left">
