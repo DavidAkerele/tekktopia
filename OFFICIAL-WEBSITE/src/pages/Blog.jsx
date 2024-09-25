@@ -4,7 +4,7 @@ import SignupTrigger from "../components/SignupTrigger";
 
 function Blog() {
   return (
-    <div className="w-full h-full flex flex-col gap-16">
+    <div className="w-full h-full flex flex-col gap-16 container">
       <Hero imageUrl={blogHeroImage} topText="Building Wealth," bottomText="Securing Futures" />
 
       <h2 className="text-center text-xl font-normal">Latest Articles</h2>
