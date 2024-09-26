@@ -36,7 +36,7 @@ export default function Services() {
       </section>
 
       {/*Quality Assurance Section */}
-      <section className="w-full bg-qualityAssuranceBg p-12">
+      <section className="w-full bg-[url('/qualityAssuranceBg.png')] p-12">
         <div className="mx-auto flex flex-col lg:flex-row text-white items-center">
           <div className="lg:w-[40%] mr-auto flex flex-col">
             <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
