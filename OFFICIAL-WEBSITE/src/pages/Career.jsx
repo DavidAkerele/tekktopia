@@ -1,4 +1,4 @@
-import HeroImage from "../assets/images/Team.png";
+import HeroImage from "../assets/images/contactUsImage.png";
 import Hero from "../components/Hero";
 export default function Career() {
   return (
@@ -6,9 +6,14 @@ export default function Career() {
       {/* Hero Section */}
       <Hero
         imageUrl={HeroImage}
-        topText="Career"
-        bottomText="Page"
+        topText="Creating Prosperity,"
+        bottomText="Ensuring Tomorrow's Success"
       />
+      <section className="relative w-full p-10">
+        <div className="w-full flex">
+          <img src="/400-Error.png" className="mx-auto"/>
+        </div>
+      </section>
     </div>
   )
 }
