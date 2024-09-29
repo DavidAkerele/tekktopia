@@ -10,9 +10,9 @@ export default function Footer() {
   const productLinks = [{ text: "Let's Gidi", href: "#" }];
 
   const socialLinks = [
-    { text: "LinkedIn", href: "#" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/company/tekktopia/" },
     { text: "Facebook", href: "#" },
-    { text: "Instagram", href: "#" },
+    { text: "Instagram", href: "https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==" },
     { text: "Twitter", href: "#" },
   ];
 
