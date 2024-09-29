@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronRight,FiChevronDown } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +8,10 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Our Project", href: "/projects" },
+    { name: "Services", href: "/services" , subMenu: true }, // Submenu item
+    { name: "Our Project", href: "/projects", subMenu: true }, // Submenu item
     { name: "Blog", href: "/blog" },
+    { name: "Career", href: "/career" },
     { name: "Our Team", href: "/our-team" },
     { name: "Connect with us", href: "/contact-us", isButton: true } // Button item
   ];
@@ -33,20 +34,22 @@ const Navbar = () => {
         {/* Right section: Menu and Button */}
         <div className="hidden lg:flex items-center gap-5">
           <div className="flex gap-4">
-            {navItems.map((item) => (
-              <a
+            {navItems.map((item) => {
+              const isActive = window.location.pathname === item.href;
+              return <a
                 key={item.name}
                 href={item.href}
                 className={`${
                   item.isButton
                     ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
-                    : "text-[#000000] hover:text-blue-500 lg:px-3 py-2"
+                    : `${isActive?"text-[#F5901F]":"text-black"} text-[#000000] hover:text-blue-500 lg:px-3 py-2`
                 } rounded-md text-xs sm:text-sm font-medium flex items-center`}
               >
                 {item.name}
                 {item.isButton && <FiChevronRight className="ml-2" />}
+                {item.subMenu && <FiChevronDown className="ml-2" />}
               </a>
-            ))}
+            })}
           </div>
         </div>
 
@@ -74,20 +77,22 @@ const Navbar = () => {
       {/* Mobile menu, show/hide based on menu state */}
       {isOpen && (
         <div className="lg:hidden px-2 w-full pt-2 pb-3 space-y-1">
-          {navItems.map((item) => (
-            <a
+          {navItems.map((item) => {
+            const isActive = window.location.pathname === item.href;
+            return <a
               key={item.name}
               href={item.href}
               className={`${
                 item.isButton
                   ? "bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2"
-                  : "text-[#000000] hover:bg-gray-700 hover:text-white px-3 py-2"
+                  : `${isActive?"text-[#F5901F]":"text-black"} hover:bg-gray-700 hover:text-white px-3 py-2`
               } block rounded-md text-base font-medium flex items-center`}
             >
               {item.name}
               {item.isButton && <FiChevronRight className="ml-2" />}
+              {item.subMenu && <FiChevronDown className="ml-2" />}
             </a>
-          ))}
+          })}
         </div>
       )}
     </nav>
