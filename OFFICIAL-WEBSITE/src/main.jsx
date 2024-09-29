@@ -8,6 +8,7 @@ import App from "./App";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import { BlogContent } from "./pages/BlogContent";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />}/>
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:name" element={<BlogContent />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Route>
