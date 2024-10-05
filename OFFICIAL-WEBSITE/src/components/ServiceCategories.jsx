@@ -2,7 +2,7 @@ import dataAnalyticIcon from "../assets/icons/dataAnalyticsIcon.png";
 import consultancyIcon from "../assets/icons/consultancyIcon.png";
 import emergingTechIcon from "../assets/icons/emergingTechIcon.png";
 import itSupportIcon from "../assets/icons/itSupportIcon.png";
-import softwareDevIcon from "../assets/icons/softwareDevICon.png";
+import softwareDevIcon from "../assets/icons/softwareDevIcon.png";
 
 import ServiceCategory from "./ServiceCategory";
 
@@ -13,15 +13,11 @@ export default function ServiceCategories() {
         bgColor: "purpleGradient",
         icon: dataAnalyticIcon,
         title: "Data & Analytics",
-        description:
-          "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.",
       },
       {
         bgColor: "grayGradient",
         icon: itSupportIcon,
         title: "IT Support & Infrastructure",
-        description:
-          "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.",
       },
     ],
     [
@@ -29,8 +25,6 @@ export default function ServiceCategories() {
         bgColor: "blueGradient",
         icon: softwareDevIcon,
         title: "Software Development & Engineering",
-        description:
-          "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.",
       },
     ],
     [
@@ -38,29 +32,28 @@ export default function ServiceCategories() {
         bgColor: "greenGradient",
         icon: emergingTechIcon,
         title: "Emerging Technologies",
-        description:
-          "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.",
       },
       {
         bgColor: "grayGradient",
         icon: consultancyIcon,
         title: "Consultancy & Strategy",
-        description:
-          "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.",
       },
     ],
   ];
 
-  // Reusable component to render each category column
-  const renderCategoryColumn = (categoryList) => (
+  const descriptionText =
+    "Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.";
+
+  const renderCategoryColumn = (categoryList, isFullHeight = false) => (
     <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-      {categoryList.map((serviceCategory, index) => (
+      {categoryList.map(({ bgColor, icon, title }, index) => (
         <ServiceCategory
-          key={index} // index is still used here for a unique key
-          bgColor={serviceCategory.bgColor}
-          icon={serviceCategory.icon}
-          title={serviceCategory.title}
-          description={serviceCategory.description}
+          key={title}
+          bgColor={bgColor}
+          icon={icon}
+          title={title}
+          description={descriptionText}
+          className={`h-1/2 ${isFullHeight && index === 0 ? "h-full lg:h-1/2" : ""}`} // Full height only for the first item in the 3rd category
         />
       ))}
     </div>
@@ -68,7 +61,9 @@ export default function ServiceCategories() {
 
   return (
     <div className="service-categories mt-12 flex-col lg:flex-row flex h-full gap-4">
-      {serviceCategories.map(renderCategoryColumn)}
+      {serviceCategories.map((categoryList, index) =>
+        index === 2 ? renderCategoryColumn(categoryList, true) : renderCategoryColumn(categoryList)
+      )}
     </div>
   );
 }

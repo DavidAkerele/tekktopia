@@ -1,30 +1,68 @@
-import { useState } from "react";
-import { FiChevronRight,FiChevronDown } from "react-icons/fi";
+import { useState, useEffect, useRef } from "react";
+import { FiChevronRight, FiChevronDown } from "react-icons/fi";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // Tracks the open submenu
+  const [isHovering, setIsHovering] = useState(false); // Tracks if the user is hovering
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Tracks mobile menu open/close state
+  const timeoutRef = useRef(null); // To store the timeout reference
 
-  // Array of nav items with name, href, and optional isButton flag
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" , subMenu: true }, // Submenu item
-    { name: "Our Project", href: "/projects", subMenu: true }, // Submenu item
+    {
+      name: "Services",
+      href: "/services",
+      subMenu: [
+        { name: "Web Development", href: "/services/web-development" },
+        { name: "App Development", href: "/services/app-development" },
+        { name: "UI/UX Design", href: "/services/ui-ux-design" },
+      ],
+    },
+    {
+      name: "Our Project",
+      href: "/projects",
+      subMenu: [
+        { name: "Project One", href: "/projects/project-one" },
+        { name: "Project Two", href: "/projects/project-two" },
+      ],
+    },
     { name: "Blog", href: "/blog" },
     { name: "Career", href: "/career" },
     { name: "Our Team", href: "/our-team" },
-    { name: "Connect with us", href: "/contact-us", isButton: true } // Button item
+    { name: "Connect with us", href: "/contact-us", isButton: true },
   ];
+
+  const handleMouseEnter = (name) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsHovering(true);
+    setOpenDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+      setOpenDropdown(null);
+    }, 300);
+  };
+
+  const handleMobileToggle = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-10 flex flex-col lg:flex-row justify-center">
-      <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between  w-full h-16 lg:container mx-auto">
+      <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between w-full h-16 lg:container mx-auto">
         
         {/* Left section: Logo */}
         <div className="flex-shrink-0 flex items-center ml-0">
           <a href="/" className="flex items-center">
             <img src="/logo.png" alt="tekktopia" className="w-8 h-8" />
-            <p className="text-[30px] ml-2">
+            <p className="text-[24px] ml-2 sm:text-[30px]">
               <span className="text-[#F5901F]">t</span>ekk
               <span className="text-[#137CC6]">t</span>opia
             </p>
@@ -33,40 +71,61 @@ const Navbar = () => {
 
         {/* Right section: Menu and Button */}
         <div className="hidden lg:flex items-center gap-5">
-          <div className="flex gap-4">
-            {navItems.map((item) => {
-              const isActive = window.location.pathname === item.href;
-              return <a
+          {navItems.map((item) => {
+            const isActive = window.location.pathname === item.href;
+            return (
+              <div
                 key={item.name}
-                href={item.href}
-                className={`${
-                  item.isButton
-                    ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
-                    : `${isActive?"text-[#F5901F]":"text-black"} text-[#000000] hover:text-blue-500 lg:px-3 py-2`
-                } rounded-md text-xs sm:text-sm font-medium flex items-center`}
+                className="relative"
+                onMouseEnter={() => item.subMenu && handleMouseEnter(item.name)}
+                onMouseLeave={handleMouseLeave}
               >
-                {item.name}
-                {item.isButton && <FiChevronRight className="ml-2" />}
-                {item.subMenu && <FiChevronDown className="ml-2" />}
-              </a>
-            })}
-          </div>
+                <a
+                  href={item.href}
+                  className={`${
+                    item.isButton
+                      ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
+                      : `${isActive ? "text-[#F5901F]" : "text-black"} hover:text-blue-500 lg:px-3 py-2`
+                  } rounded-md text-xs sm:text-sm font-medium flex items-center`}
+                >
+                  {item.name}
+                  {item.isButton && <FiChevronRight className="ml-2" />}
+                  {item.subMenu && <FiChevronDown className="ml-2" />}
+                </a>
+
+                {/* Dropdown menu */}
+                {item.subMenu && openDropdown === item.name && isHovering && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-20">
+                    {item.subMenu.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-black hover:bg-gray-200"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Mobile menu button */}
-        <div className="absolute inset-y-0 right-0 ml-4 flex items-center lg:hidden">
+        <div className="lg:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-expanded={isOpen}
+            onClick={handleMobileToggle}
+            className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-expanded={isMobileMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
-            {!isOpen ? (
-              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            {!isMobileMenuOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             ) : (
-              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             )}
@@ -74,24 +133,42 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu, show/hide based on menu state */}
-      {isOpen && (
-        <div className="lg:hidden px-2 w-full pt-2 pb-3 space-y-1">
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => {
             const isActive = window.location.pathname === item.href;
-            return <a
-              key={item.name}
-              href={item.href}
-              className={`${
-                item.isButton
-                  ? "bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2"
-                  : `${isActive?"text-[#F5901F]":"text-black"} hover:bg-gray-700 hover:text-white px-3 py-2`
-              } block rounded-md text-base font-medium flex items-center`}
-            >
-              {item.name}
-              {item.isButton && <FiChevronRight className="ml-2" />}
-              {item.subMenu && <FiChevronDown className="ml-2" />}
-            </a>
+            return (
+              <div key={item.name} className="relative">
+                <a
+                  href={item.href}
+                  className={`${
+                    item.isButton
+                      ? "bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2"
+                      : `${isActive ? "text-[#F5901F]" : "text-black"} hover:bg-gray-700 hover:text-white px-3 py-2`
+                  } block rounded-md text-base font-medium flex items-center`}
+                >
+                  {item.name}
+                  {item.isButton && <FiChevronRight className="ml-2" />}
+                  {item.subMenu && <FiChevronDown className="ml-2" />}
+                </a>
+
+                {/* Mobile dropdown */}
+                {item.subMenu && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {item.subMenu.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block pl-7 pr-4 py-2 text-base text-black hover:bg-gray-200"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
           })}
         </div>
       )}

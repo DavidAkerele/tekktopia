@@ -14,22 +14,22 @@ const Home = () => {
   return (
     <section className="mt-24 md:mt-44 ">
       {/* First Home Section */}
-      <div className="flex flex-col items-center min-h-screen px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2">
+      <div className="flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
           <div className="text-center md:text-left leading-tight md:leading-[80px] font-medium text-[#0B0B0B] text-[24px] sm:text-[28px] md:text-[60px]">
             We manage your IT, so
           </div>
-          <div className="flex items-center mt-4 md:mt-0">
-            <img src="/Ellipse23.png" className="absolute" alt="ellipse23" />
+          <div className="flex items-center mt-4 md:mt-0 relative">
+            <img src="/Ellipse23.png" className="relative  " alt="ellipse23" />
             <img
               src="/Ellipse24.png"
               alt="ellipse24"
-              className="relative left-2 sm:left-4 md:left-14"
+              className="relative right-2"
             />
             <img
               src="/Ellipse25.png"
               alt="ellipse25"
-              className="relative left-1 sm:left-2 md:left-12"
+              className="relative right-4"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ const Home = () => {
           unique needs of our clients.
         </p>
 
-        <div className="flex flex-col md:flex-row mt-8 gap-2 items-center justify-center">
+        <div className="flex flex-col md:flex-row mt-8 gap-4 items-center justify-center">
           <button className="bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2 rounded-md text-base font-medium flex items-center">
             Contact us <FiChevronRight />
           </button>
@@ -154,10 +154,10 @@ const Home = () => {
 
       {/* Fourth Home Section */}
       <section className="mt-40 flex flex-col items-center ">
-        <div class="relative text-center">
-          <span class="inline-block pb-4 text-[32px] font-[400] relative">
+        <div className="relative text-center">
+          <span className="inline-block pb-4 text-[32px] font-[400] relative">
             Driving Innovation, Building Prosperity
-            <span class="absolute left-1/2 -translate-x-1/2 bottom-[-2px] w-[120px] border-b-[3px] border-[#F8901F80]"></span>
+            <span className="absolute left-1/2 -translate-x-1/2 bottom-[-2px] w-[120px] border-b-[3px] border-[#F8901F80]"></span>
           </span>
         </div>
         <div className="text-center text-[14px] leading-[24px] mx-auto text-[#697D95B2] mt-6 max-w-[700px]">
