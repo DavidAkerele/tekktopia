@@ -14,17 +14,17 @@ const Navbar = () => {
       name: "Services",
       href: "/services",
       subMenu: [
-        { name: "Web Development", href: "/services/web-development" },
-        { name: "App Development", href: "/services/app-development" },
-        { name: "UI/UX Design", href: "/services/ui-ux-design" },
+        { name: "Web Development", href: "/services" },
+        { name: "App Development", href: "/services" },
+        { name: "UI/UX Design", href: "/services" },
       ],
     },
     {
       name: "Our Project",
       href: "/projects",
       subMenu: [
-        { name: "Project One", href: "/projects/project-one" },
-        { name: "Project Two", href: "/projects/project-two" },
+        { name: "Project One", href: "/projects" },
+        { name: "Project Two", href: "/projects" },
       ],
     },
     { name: "Blog", href: "/blog" },
