@@ -1,6 +1,6 @@
-import { MdArrowForward, MdPerson, MdPhone, MdMail } from "react-icons/md";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { MdArrowForward, MdPerson, MdPhone, MdMail } from 'react-icons/md';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 // Form component
 export default function Form() {
@@ -8,32 +8,32 @@ export default function Form() {
   const inputContent = [
     {
       icon: <MdPerson className="text-gray-500 text-xl sm:text-2xl" />,
-      placeholder: "First Name",
-      name: "first_name",
-      type: "text"
+      placeholder: 'First Name',
+      name: 'first_name',
+      type: 'text',
     },
     {
       icon: <MdPerson className="text-gray-500 text-xl sm:text-2xl" />,
-      placeholder: "Last Name",
-      name: "last_name",
-      type: "text"
+      placeholder: 'Last Name',
+      name: 'last_name',
+      type: 'text',
     },
     {
       icon: <MdPhone className="text-gray-500 text-xl sm:text-2xl" />,
-      placeholder: "Phone Number",
-      name: "user_phone",
-      type: "tel"
+      placeholder: 'Phone Number',
+      name: 'user_phone',
+      type: 'tel',
     },
     {
       icon: <MdMail className="text-gray-500 text-xl sm:text-2xl" />,
-      placeholder: "Email",
-      name: "user_email",
-      type: "email"
+      placeholder: 'Email',
+      name: 'user_email',
+      type: 'email',
     },
   ];
 
   const form = useRef();
-  const [emailSent, setEmailSent] = useState("");
+  const [emailSent, setEmailSent] = useState('');
 
   // Function to handle input validation for phone number
   const handlePhoneInput = (e) => {
@@ -46,16 +46,16 @@ export default function Form() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_v84wlm2", "template_n3bfm7c", form.current, {
-        publicKey: "FRzkYgrpiHA_BogGH",
+      .sendForm('service_v84wlm2', 'template_n3bfm7c', form.current, {
+        publicKey: 'FRzkYgrpiHA_BogGH',
       })
       .then(
         () => {
-          setEmailSent("Email sent successfully!");
+          setEmailSent('Email sent successfully!');
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          setEmailSent("Failed to send email!");
+          console.log('FAILED...', error.text);
+          setEmailSent('Failed to send email!');
         }
       );
   };
@@ -87,7 +87,7 @@ export default function Form() {
               className="outline-0 w-full text-sm sm:text-base"
               name={item.name}
               type={item.type}
-              onInput={item.type === 'tel' ? handlePhoneInput : null}  //Ensuring only numbers are allowed in phone number field
+              onInput={item.type === 'tel' ? handlePhoneInput : null} //Ensuring only numbers are allowed in phone number field
               required
             />
           </div>
@@ -102,7 +102,10 @@ export default function Form() {
       />
       <div className="flex items-center flex-col lg:flex-row">
         {/* Submit button */}
-        <button type="submit" className="ml-0 bg-[#F5901F] w-full text-center lg:w-1/4 text-white text-xs p-2 py-3 text-xs rounded-lg flex items-center gap-2">
+        <button
+          type="submit"
+          className="ml-0 bg-[#F5901F] w-full text-center lg:w-1/4 text-white text-xs p-2 py-3 text-xs rounded-lg flex items-center gap-2"
+        >
           Send Message
           <MdArrowForward className="ml-auto" />
         </button>

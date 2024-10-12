@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import Hero from "../components/Hero";
+import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
 // import blogHeroImage from "/blog-hero.png";
-import SignupTrigger from "../components/SignupTrigger";
+import SignupTrigger from '../components/SignupTrigger';
 
 function Blog() {
   return (
     <div className="w-full h-full flex flex-col gap-16 container">
       <Hero
-        imageUrl={"/blog-hero.png"}
+        imageUrl={'/blog-hero.png'}
         topText="Building Wealth,"
         bottomText="Securing Futures"
       />
@@ -18,12 +18,12 @@ function Blog() {
         {/* First Article Section */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {[
-            { image: "article1.png", title: "Lorem weoighwegioeh iwohfewn" },
-            { image: "article2.png", title: "Somethings" },
-            { image: "article3.png", title: "Example" },
+            { image: 'article1.png', title: 'Lorem weoighwegioeh iwohfewn' },
+            { image: 'article2.png', title: 'Somethings' },
+            { image: 'article3.png', title: 'Example' },
           ].map((article, index) => (
             <Link
-              to={{ pathname: `/blog/${article.title}`, state: "Water" }}
+              to={{ pathname: `/blog/${article.title}`, state: 'Water' }}
               key={index}
               className="space-y-2"
             >
@@ -45,13 +45,13 @@ function Blog() {
         {/* Second Article Section */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {[
-            { image: "article4.png", title: "Lorem weoighwegioeh iwohfewn" },
-            { image: "article5.png", title: "Somethings" },
-            { image: "article6.png", title: "Example" },
-            { image: "article7.png", title: "Example" },
+            { image: 'article4.png', title: 'Lorem weoighwegioeh iwohfewn' },
+            { image: 'article5.png', title: 'Somethings' },
+            { image: 'article6.png', title: 'Example' },
+            { image: 'article7.png', title: 'Example' },
           ].map((article, index) => (
             <Link
-              to={{ pathname: `/blog/${article.title}`, state: "Water" }}
+              to={{ pathname: `/blog/${article.title}`, state: 'Water' }}
               key={index}
               className="space-y-2"
             >

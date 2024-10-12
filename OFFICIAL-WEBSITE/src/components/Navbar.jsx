@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { FiChevronRight, FiChevronDown } from "react-icons/fi";
+import { useState, useEffect, useRef } from 'react';
+import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null); // Tracks the open submenu
@@ -8,29 +8,29 @@ const Navbar = () => {
   const timeoutRef = useRef(null); // To store the timeout reference
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     {
-      name: "Services",
-      href: "/services",
+      name: 'Services',
+      href: '/services',
       subMenu: [
-        { name: "Web Development", href: "/services" },
-        { name: "App Development", href: "/services" },
-        { name: "UI/UX Design", href: "/services" },
+        { name: 'Web Development', href: '/services' },
+        { name: 'App Development', href: '/services' },
+        { name: 'UI/UX Design', href: '/services' },
       ],
     },
     {
-      name: "Our Project",
-      href: "/projects",
+      name: 'Our Project',
+      href: '/projects',
       subMenu: [
-        { name: "Project One", href: "/projects" },
-        { name: "Project Two", href: "/projects" },
+        { name: 'Project One', href: '/projects' },
+        { name: 'Project Two', href: '/projects' },
       ],
     },
-    { name: "Blog", href: "/blog" },
-    { name: "Career", href: "/career" },
-    { name: "Our Team", href: "/our-team" },
-    { name: "Connect with us", href: "/contact-us", isButton: true },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Career', href: '/career' },
+    { name: 'Our Team', href: '/our-team' },
+    { name: 'Connect with us', href: '/contact-us', isButton: true },
   ];
 
   const handleMouseEnter = (name) => {
@@ -57,7 +57,6 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-10 flex flex-col lg:flex-row justify-center">
       <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between w-full h-16 lg:container mx-auto">
-        
         {/* Left section: Logo */}
         <div className="flex-shrink-0 flex items-center ml-0">
           <a href="/" className="flex items-center">
@@ -84,8 +83,8 @@ const Navbar = () => {
                   href={item.href}
                   className={`${
                     item.isButton
-                      ? "bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2"
-                      : `${isActive ? "text-[#F5901F]" : "text-black"} hover:text-blue-500 lg:px-3 py-2`
+                      ? 'bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2'
+                      : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:text-blue-500 lg:px-3 py-2`
                   } rounded-md text-xs sm:text-sm font-medium flex items-center`}
                 >
                   {item.name}
@@ -121,12 +120,32 @@ const Navbar = () => {
           >
             <span className="sr-only">Open main menu</span>
             {!isMobileMenuOpen ? (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             ) : (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             )}
           </button>
@@ -144,8 +163,8 @@ const Navbar = () => {
                   href={item.href}
                   className={`${
                     item.isButton
-                      ? "bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2"
-                      : `${isActive ? "text-[#F5901F]" : "text-black"} hover:bg-gray-700 hover:text-white px-3 py-2`
+                      ? 'bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2'
+                      : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:bg-gray-700 hover:text-white px-3 py-2`
                   } block rounded-md text-base font-medium flex items-center`}
                 >
                   {item.name}

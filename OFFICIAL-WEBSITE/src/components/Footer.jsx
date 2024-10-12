@@ -1,25 +1,28 @@
 export default function Footer() {
   // Array of links and contact info
   const companyLinks = [
-    { text: "About Us", href: "#" },
-    { text: "Services", href: "#" },
-    { text: "Our Project", href: "#" },
-    { text: "Blog", href: "#" },
-  ]; 
+    { text: 'About Us', href: '#' },
+    { text: 'Services', href: '#' },
+    { text: 'Our Project', href: '#' },
+    { text: 'Blog', href: '#' },
+  ];
 
-  const productLinks = [{ text: "Let's Gidi", href: "#" }];
+  const productLinks = [{ text: "Let's Gidi", href: '#' }];
 
   const socialLinks = [
-    { text: "LinkedIn", href: "https://www.linkedin.com/company/tekktopia/" },
-    { text: "Facebook", href: "#" },
-    { text: "Instagram", href: "https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==" },
-    { text: "Twitter", href: "#" },
+    { text: 'LinkedIn', href: 'https://www.linkedin.com/company/tekktopia/' },
+    { text: 'Facebook', href: '#' },
+    {
+      text: 'Instagram',
+      href: 'https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==',
+    },
+    { text: 'Twitter', href: '#' },
   ];
 
   const contactInfo = [
-    { text: "+234 809 414 0706" },
-    { text: "+234 902 254 2963" },
-    { text: "tekktopia@gmail.com" },
+    { text: '+234 809 414 0706' },
+    { text: '+234 902 254 2963' },
+    { text: 'tekktopia@gmail.com' },
   ];
 
   return (
@@ -110,9 +113,9 @@ export default function Footer() {
           <p>© 2024 All Rights Reserved</p>
           <div className="flex gap-4">
             {[
-              { text: "Terms & Conditions", href: "#" },
-              { text: "Privacy Policy", href: "#" },
-              { text: "FAQs", href: "#" },
+              { text: 'Terms & Conditions', href: '#' },
+              { text: 'Privacy Policy', href: '#' },
+              { text: 'FAQs', href: '#' },
             ].map((link) => (
               <a
                 key={link.text}

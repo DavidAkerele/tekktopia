@@ -15,10 +15,12 @@ const MapComponent = () => {
   });
 
   return (
-    <MapContainer center={[6.5244, 3.3792]} zoom={8} style={{ height: '345px', width: '100%' }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+    <MapContainer
+      center={[6.5244, 3.3792]}
+      zoom={8}
+      style={{ height: '345px', width: '100%' }}
+    >
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={[6.5244, 3.3792]}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.

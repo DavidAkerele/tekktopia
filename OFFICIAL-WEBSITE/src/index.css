@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 .footer > * {
-    font-size: clamp(10px, 1vw, 2rem);
+  font-size: clamp(10px, 1vw, 2rem);
 }
 
 .name {
-    font-size: clamp(10px, 1vw 30px)
+  font-size: clamp(10px, 1vw 30px);
 }
 
 .heading {
-    font-size: clamp(10px, 1vw 16px)
+  font-size: clamp(10px, 1vw 16px);
 }
 
 .logo {
-    width: clamp(10px, 1vw 16px);
+  width: clamp(10px, 1vw 16px);
 }
 
 .hero {
-    font-size: clamp(20px, 3vw, 50px)
+  font-size: clamp(20px, 3vw, 50px);
 }

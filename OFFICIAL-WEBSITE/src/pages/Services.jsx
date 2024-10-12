@@ -1,11 +1,10 @@
-import Hero from "../components/Hero";
-import HeroImage from "../assets/images/Team.png";
-import yellowLine from "../assets/images/yellowLine.png";
-import ServiceCategories from "../components/ServiceCategories";
+import Hero from '../components/Hero';
+import HeroImage from '../assets/images/Team.png';
+import yellowLine from '../assets/images/yellowLine.png';
+import ServiceCategories from '../components/ServiceCategories';
 
-import SignupTrigger from "../components/SignupTrigger";
+import SignupTrigger from '../components/SignupTrigger';
 // import qualityAssuranceBg from "../assets/images/qualityAssuranceBg.png";
-
 
 export default function Services() {
   const signUpRounded = true;
@@ -58,7 +57,10 @@ export default function Services() {
               architecto beatae vitae dicta sunt lorem ispum.
             </p>
           </div>
-          <img src="/progressBar.png" className="lg:mt-0 mt-8 mr-auto lg:mr-0"/> 
+          <img
+            src="/progressBar.png"
+            className="lg:mt-0 mt-8 mr-auto lg:mr-0"
+          />
         </div>
       </section>
 

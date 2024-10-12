@@ -1,36 +1,40 @@
-import contactUsImage from "../assets/images/contactUsImage.png";
-import yellowLine from "../assets/images/yellowLine.png";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import Map from "../components/Map";
-import Form from "../components/Form";
-import Hero from "../components/Hero";
-import SignupTrigger from "../components/SignupTrigger";
+import contactUsImage from '../assets/images/contactUsImage.png';
+import yellowLine from '../assets/images/yellowLine.png';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import Map from '../components/Map';
+import Form from '../components/Form';
+import Hero from '../components/Hero';
+import SignupTrigger from '../components/SignupTrigger';
 
 // ContactUs component
 export default function ContactUs() {
   // Array containing contact information
   const contactLinks = [
     {
-      icon: "FaPhone",
-      title: "Call Us at",
-      info: "1234567890",
+      icon: 'FaPhone',
+      title: 'Call Us at',
+      info: '1234567890',
     },
     {
-      icon: "FaMapMarkerAlt",
-      title: "Location",
-      info: "Anywhere street, Anywhere city",
+      icon: 'FaMapMarkerAlt',
+      title: 'Location',
+      info: 'Anywhere street, Anywhere city',
     },
     {
-      icon: "FaEnvelope",
-      title: "Send us a mail",
-      info: "1234567890",
+      icon: 'FaEnvelope',
+      title: 'Send us a mail',
+      info: '1234567890',
     },
   ];
 
   return (
     <div className="w-full container">
       {/* Hero Section */}
-      <Hero imageUrl={contactUsImage} topText="Creating Prosperity," bottomText="Ensuring Tomorrow's Success" />
+      <Hero
+        imageUrl={contactUsImage}
+        topText="Creating Prosperity,"
+        bottomText="Ensuring Tomorrow's Success"
+      />
 
       {/* Contact Info Section */}
       <section className="relative w-full p-10">
@@ -53,13 +57,13 @@ export default function ContactUs() {
           {contactLinks.map((contactLink, index) => (
             // Contact link item
             <div key={index} className="flex gap-2 lg:gap-8 items-center">
-              {contactLink.icon === "FaPhone" && (
+              {contactLink.icon === 'FaPhone' && (
                 <FaPhone className="text-[#B0610F] text-xl rotate-90" />
               )}
-              {contactLink.icon === "FaMapMarkerAlt" && (
+              {contactLink.icon === 'FaMapMarkerAlt' && (
                 <FaMapMarkerAlt className="text-[#B0610F] text-xl" />
               )}
-              {contactLink.icon === "FaEnvelope" && (
+              {contactLink.icon === 'FaEnvelope' && (
                 <FaEnvelope className="text-[#B0610F] text-xl" />
               )}
               <div className="flex flex-col gap-1">
@@ -82,7 +86,7 @@ export default function ContactUs() {
       <section className="relative w-full h-[450px] sm:h-[650px] py-20 px-6">
         <Form />
       </section>
-      <SignupTrigger/>
+      <SignupTrigger />
     </div>
   );
 }

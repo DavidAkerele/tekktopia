@@ -1,14 +1,14 @@
 // import React from 'react';
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import HeroImage from "../assets/images/home1.png";
-import { GrStatusGood } from "react-icons/gr";
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import HeroImage from '../assets/images/home1.png';
+import { GrStatusGood } from 'react-icons/gr';
 
 const Home = () => {
   const inno = [
-    { id: 1, img: "/inno1.png", title: "Transportation" },
-    { id: 2, img: "/inno2.png", title: "Corporate Organisation" },
-    { id: 3, img: "/inno3.png", title: "Health care" },
-    { id: 4, img: "/inno4.png", title: "Finance" },
+    { id: 1, img: '/inno1.png', title: 'Transportation' },
+    { id: 2, img: '/inno2.png', title: 'Corporate Organisation' },
+    { id: 3, img: '/inno3.png', title: 'Health care' },
+    { id: 4, img: '/inno4.png', title: 'Finance' },
   ];
 
   return (
@@ -255,7 +255,7 @@ const Home = () => {
         </h2>
         <div className="flex items-center flex-col">
           <div className="flex gap-8 max-w-[1280px]">
-            {["article1.png", "article2.png", "article3.png"].map(
+            {['article1.png', 'article2.png', 'article3.png'].map(
               (article, index) => (
                 <div key={index} className="space-y-2">
                   <img

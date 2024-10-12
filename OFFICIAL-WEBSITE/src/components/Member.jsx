@@ -4,20 +4,25 @@ import PropTypes from 'prop-types';
 // Member component to display individual team member details
 export default function Member({ member }) {
   return (
-    <div className='flex flex-col items-center mx-auto p-2'>
+    <div className="flex flex-col items-center mx-auto p-2">
       {/* Team member image */}
       <img src={member.imageUrl} alt="team" className="h-100 object-cover" />
-      
+
       <div className="-mt-8 w-full p-2">
-        <div className='flex flex-row bg-white rounded-lg items-center shadow-lg p-2'>
-          <div className='flex flex-col'>
+        <div className="flex flex-row bg-white rounded-lg items-center shadow-lg p-2">
+          <div className="flex flex-col">
             {/* Team member role */}
-            <h3 className='text-gray-500'>{member.role}</h3>
+            <h3 className="text-gray-500">{member.role}</h3>
             {/* Team member name */}
             <h2>{member.name}</h2>
           </div>
           {/* LinkedIn profile link */}
-          <a className='ml-auto' href={member.linkedIn} target='_blank' rel='noopener noreferrer'>
+          <a
+            className="ml-auto"
+            href={member.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin className="text-[#B0610F] text-2xl" />
           </a>
         </div>

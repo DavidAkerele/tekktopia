@@ -9,7 +9,8 @@ const Hero = ({ imageUrl, topText, bottomText }) => {
         className="w-full h-[450px] sm:h-[650px] object-cover"
       />
       <h1 className="absolute text-white text-left left-4 sm:left-[80px] top-[200px] sm:top-[390px] font-medium text-[24px] sm:text-[36px] lg:text-[60px]">
-        {topText}<br />
+        {topText}
+        <br />
         {bottomText}
       </h1>
     </section>

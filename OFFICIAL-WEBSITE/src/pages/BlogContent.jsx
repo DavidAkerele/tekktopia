@@ -3,12 +3,11 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTwitter,
-} from "react-icons/fa6";
-import { useParams } from "react-router-dom";
+} from 'react-icons/fa6';
+import { useParams } from 'react-router-dom';
 
 export const BlogContent = () => {
   const { name } = useParams();
-
 
   return (
     <div className="mt-36 px-16 flex flex-col gap-16 w-full max-w-7xl">
