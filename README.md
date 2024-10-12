@@ -1,10 +1,8 @@
-
 ![tekktopia](https://github.com/user-attachments/assets/226b66e6-fb98-44bb-be92-bf31c2f11d2c)
 
 ---
 
 # Tekktopia Company Website
-
 
 Welcome to the **Tekktopia** company website project! This project is designed and built with modern web technologies to showcase the services, values, and offerings of Tekktopia, a cutting-edge tech company. The project is developed using **React** and **Tailwind CSS**, ensuring a fast, responsive, and interactive user experience.
 
@@ -26,7 +24,6 @@ The Tekktopia company website serves as the digital face of the organization, re
 ## Features
 
 - **Responsive Design**: The website is built using Tailwind CSS, ensuring that it adapts to different screen sizes, providing a seamless experience across mobile, tablet, and desktop devices.
-  
 - **Interactive Components**: Powered by React, the site includes various interactive elements, such as forms, dynamic navigation, and animated transitions.
 
 - **Fast Loading Time**: Tailwind's utility-first CSS and React’s component-based architecture ensure that the website is highly performant and loads quickly.
@@ -47,11 +44,13 @@ The project is built with the following technologies:
 To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/Tekktopia-Ltd/OFFICIAL-WEBSITE.git
    ```
 
 2. **Navigate to the project directory**:
+
    ```bash
    cd OFFICIAL-WEBSITE
    ```
