@@ -72,9 +72,6 @@ export default function OurTeam() {
         />
         <TeamMembers />
       </section>
-
-      {/* Signup Trigger */}
-      <SignupTrigger />
     </div>
   );
 }

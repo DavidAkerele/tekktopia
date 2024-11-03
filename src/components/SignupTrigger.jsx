@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 export default function SignupTrigger({ signUpRounded }) {
   return (
-    <section
-      className={`relative w-full flex flex-col rounded-lg ${signUpRounded ? 'lg:rounded-lg' : ''}`}
+    <div
+      className={`relative w-full mt-[80px] flex flex-col rounded-lg ${signUpRounded ? 'lg:rounded-lg' : ''}`}
     >
       <img
         src="/footer.png"
@@ -10,7 +10,7 @@ export default function SignupTrigger({ signUpRounded }) {
         className={`w-full h-[418px] ${signUpRounded ? 'lg:rounded-lg' : ''}`}
       />
       <div className="left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-full max-w-6xl px-4 mx-auto absolute text-white gap-4">
-        <p className="font-[500] hero text-center">
+        <p className="font-[500] hero text-center text-[40px] mb-[20px]">
           To take a trivial example, which of us ever undertakes laborious
           physical exercise
         </p>
@@ -21,7 +21,7 @@ export default function SignupTrigger({ signUpRounded }) {
           explorer of the truth,
         </p>
       </div>
-    </section>
+    </div>
   );
 }
 

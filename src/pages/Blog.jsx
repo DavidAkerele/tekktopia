@@ -68,7 +68,6 @@ function Blog() {
           ))}
         </section>
       </div>
-      <SignupTrigger />
     </div>
   );
 }

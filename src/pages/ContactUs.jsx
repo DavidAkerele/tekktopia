@@ -86,7 +86,6 @@ export default function ContactUs() {
       <section className="relative w-full h-[450px] sm:h-[650px] py-20 px-6">
         <Form />
       </section>
-      <SignupTrigger />
     </div>
   );
 }

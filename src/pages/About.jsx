@@ -1,4 +1,11 @@
+import OurStory from '../components/About/ourStory/OurStory';
+import AboutBanner from '../components/About/banner/AboutBanner';
+import GetStarted from '../components/About/getStarted/GetStarted';
+import CompanyEthos from '../components/About/companyEthos/CompanyEthos';
+
 const About = () => {
+
+
   return (
     <section className="mt-24">
       {/*First about section*/}
@@ -21,38 +28,16 @@ const About = () => {
       </div>
 
       {/*Second about section*/}
-      <section className="mt-[120px]">
-        <div className="flex gap[90px] justify-center">
-          <div className="max-w-[620px] flex flex-col justify-center">
-            <p className="text-[14px] font-medium mb-4">OUR STORY</p>
-            <h2 className="text-[32px] mb-4">How We Started Till Date</h2>
-            <p className="text-[#697D95B2] text-[14px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in
-              ligula aliquam, faucibus erat a, dictum erat. Aliquam rutrum eget
-              odio et mattis. Sed laoreet porta condimentum. Phasellus
-              sollicitudin lobortis porta. Donec a eros quis nunc pretium
-              egestas. Ut ultrices sed leo non vestibulum. Nullam ac nulla
-              suscipit.
-            </p>
-          </div>
+      <OurStory />
 
-          <div className="relative">
-            <img src="/about3.png" alt="" />
-            <div className="absolute top-7 left-4">
-              <h1 className="text-[32px] text-white font-extrabold">2021</h1>
-              <p className="mt-[190px] mb-4 text-[16px] text-white font-[500]">
-                The Beginning
-              </p>
-              <p className="text-white text-[14px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in
-                ligula aliquam, faucibus erat a, dictum erat. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Ut in ligula aliquam,
-                faucibus erat a, dictum erat.{' '}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* fourth about section */}
+      <AboutBanner />
+
+      {/* fifth about section */}
+      <GetStarted />
+
+      {/* sixth about section */}
+      <CompanyEthos />
     </section>
   );
 };
