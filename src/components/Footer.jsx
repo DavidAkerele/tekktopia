@@ -1,3 +1,5 @@
+import tekktopia from '../assets/images/tekktopia.png'
+
 export default function Footer() {
   // Array of links and contact info
   const companyLinks = [
@@ -31,7 +33,7 @@ export default function Footer() {
           <div className="flex flex-col text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start text-[30px] mb-4">
               <div className="w-[44px] h-[44px]">
-                <img src="/src/assets/images/tekktopia.png" alt="Tekktopia Logo" />
+                <img src={tekktopia} alt="Tekktopia Logo" />
               </div>
               <span className="text-[#f5901f] ml-[10px]">t</span>eKK
               <span className="text-[#137cc6]">t</span>opia
