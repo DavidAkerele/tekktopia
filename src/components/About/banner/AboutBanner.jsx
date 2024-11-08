@@ -1,5 +1,7 @@
 import AnimatedLines from '../../../components/AnimatedLines';
 
+import About3 from '../../../assets/images/about/About3.png'
+
 const AboutBanner = () => {
   return (
     <div className="relative bg-[#081527] h-[884px] w-full mt-[200px] flex items-center justify-center">
@@ -19,7 +21,7 @@ const AboutBanner = () => {
 
         <div className="w-full sm:w-[700px] mt-[52px] z-2">
           <img
-            src="/src/assets/images/about/About3.png"
+            src={About3}
             alt="About Us"
             className="object-cover w-full h-full"
           />

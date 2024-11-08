@@ -1,5 +1,7 @@
 import ShadedTriangleIcon from '../../../icons/ShadedTriangleIcon';
 
+import About4 from '../../../assets/images/about/About4.png'
+
 const CompanyEthos = () => {
   const cards = [
     {
@@ -25,7 +27,7 @@ const CompanyEthos = () => {
         {/* Left Image Section */}
         <div className="relative w-full lg:w-[700px] h-[750px] mb-8 lg:mb-0">
           <img
-            src="/src/assets/images/about/About4.png"
+            src={About4}
             alt="Company Ethos Overview"
             className="object-cover w-full h-full"
           />

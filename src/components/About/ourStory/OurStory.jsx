@@ -2,6 +2,8 @@ import TriangleIcon from '../../../icons/TriangleIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
+import About2 from '../../../assets/images/about/About2.png'
+
 const OurStory = () => {
   const yearData = [
     {
@@ -96,7 +98,7 @@ const OurStory = () => {
       <section className="flex flex-col sm:flex-row gap-[80px] justify-center mt-[120px] px-4 sm:px-6 lg:px-8">
         <div className="w-full sm:w-[580px] h-[400px]">
           <img
-            src="/src/assets/images/about/About2.png"
+            src={About2}
             alt="About Image"
             className="object-cover w-full h-full"
           />
