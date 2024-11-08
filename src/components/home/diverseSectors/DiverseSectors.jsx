@@ -1,6 +1,8 @@
 import { FiChevronRight } from 'react-icons/fi';
 import { GrStatusGood } from 'react-icons/gr';
 
+import home3 from '../../../assets/images/home3.svg'
+
 const DiverseSectors = () => {
   return (
     <section className="mt-40 px-4 lg:px-16">
@@ -9,7 +11,7 @@ const DiverseSectors = () => {
         <div className="w-full max-w-[600px] h-auto flex justify-center items-center bg-gradient-to-br from-[#041429] from-[60%] to-[#244674] to-[100%] rounded-[12px]">
           <div className="p-4 box-border border-[1px] border-[#1e2c3e] rounded-md">
             <img
-              src="/src/assets/images/home3.svg"
+              src={home3}
               alt=""
               className="w-full h-auto max-w-[472px] max-h-[522px] object-cover"
             />
