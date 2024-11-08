@@ -24,7 +24,7 @@ export default function ServiceCategories() {
       {
         bgColor: 'blueGradient',
         // icon: softwareDevIcon,
-        // title: 'Software Development & Engineering',
+        title: 'Software Development & Engineering',
       },
     ],
     [
