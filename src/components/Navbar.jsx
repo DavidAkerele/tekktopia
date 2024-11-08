@@ -14,12 +14,12 @@ const Navbar = () => {
     {
       name: 'Services',
       subMenu: [
-        { name: 'Data & Analytics', href: '/services' },
-        { name: 'IT Support and Infrastructure', href: '/services' },
         { name: 'Software Development and Engineering', href: '/services' },
-        { name: 'Consultancy and Strategy', href: '/services' },
-        { name: 'Brand Identity', href: '/services' },
         { name: 'Cloud computing services', href: '/services' },
+        { name: 'Brand Identity & Design', href: '/services' },
+        { name: 'IT Consulting', href: '/services' },
+        { name: 'Data Analytics & Business Intelligence', href: '/services' },
+        { name: 'Cybersecurity Solutions', href: '/services' },
       ],
     },
     { name: 'Blog', href: '/blog' },
