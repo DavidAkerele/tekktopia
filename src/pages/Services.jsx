@@ -5,7 +5,7 @@ import TrustOurProcess from '../components/services/trustOurProcess/TrustOurProc
 
 export default function Services() {
   return (
-    <div className="w-full container mx-auto px-4">
+    <div className="w-full items-center flex flex-col justify-center  mx-auto">
       {/* Hero Section */}
       <Hero
         imageUrl={HeroImage}
@@ -14,12 +14,12 @@ export default function Services() {
       />
 
       {/* Our Services Section */}
-      <div className="mt-16">
+      <div className=" container ">
         <OurServices />
       </div>
 
       {/* Quality Assurance Section */}
-      <div className="mt-16">
+      <div className="container">
         <TrustOurProcess />
       </div>
     </div>

@@ -5,7 +5,7 @@ import ourTeamImage3 from '../assets/images/ourTeamImage3.png';
 import ourTeamImage4 from '../assets/images/ourTeamImage4.png';
 import yellowLine from '../assets/images/yellowLine.png';
 import Hero from '../components/Hero';
-import SignupTrigger from '../components/SignupTrigger';
+// import SignupTrigger from '../components/SignupTrigger';
 import TeamMembers from '../components/TeamMembers';
 
 export default function OurTeam() {

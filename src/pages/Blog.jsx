@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 // import blogHeroImage from "/blog-hero.png";
-import SignupTrigger from '../components/SignupTrigger';
+// import SignupTrigger from '../components/SignupTrigger';
 
 function Blog() {
   return (
-    <div className="w-full h-full flex flex-col gap-16 container">
+    <div className="w-full h-full flex flex-col gap-16 ">
       <Hero
         imageUrl={'/blog-hero.png'}
         topText="Building Wealth,"

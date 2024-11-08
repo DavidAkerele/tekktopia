@@ -3,7 +3,7 @@
 const BridgingExcellence = () => {
   return (
     <section className="bg-[#081527] w-full px-4 lg:px-16">
-      <div className="flex flex-col items-center min-h-screen">
+      <div className="flex flex-col items-center ">
         {/* Heading Section */}
         <div className="mt-16 md:mt-[115px] text-center">
           <div className="text-[#FFFFFF] text-[22px] sm:text-[24px] md:text-[32px] font-[DM Sans] font-medium leading-[28px] sm:leading-[30px] md:leading-[45px] mb-2">

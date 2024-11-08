@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import Map from '../components/Map';
 import Form from '../components/Form';
 import Hero from '../components/Hero';
-import SignupTrigger from '../components/SignupTrigger';
+// import SignupTrigger from '../components/SignupTrigger';
 
 // ContactUs component
 export default function ContactUs() {
@@ -28,7 +28,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="w-full container">
+    <div className="w-full ">
       {/* Hero Section */}
       <Hero
         imageUrl={contactUsImage}

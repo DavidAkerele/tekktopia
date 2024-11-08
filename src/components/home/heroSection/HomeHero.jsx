@@ -1,5 +1,9 @@
 import { FiChevronRight } from 'react-icons/fi';
 
+import home1 from '../../../assets/images/home1.png'
+import heroSection2 from '../../../assets/images/heroSection2.svg'
+
+
 const HomeHero = () => {
   return (
     <div className=" px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -43,7 +47,7 @@ const HomeHero = () => {
 
       <div className="mt-10 mb-20 w-full relative">
         <img
-          src="/src/assets/images/home1.png"
+          src={home1}
           className="mx-auto w-full max-w-[1240px] h-auto"
           alt="hero"
         />
@@ -53,7 +57,7 @@ const HomeHero = () => {
           </div>
           <div className="flex items-center justify-between mt-[8px] p-[12px] border border-[#CCCCCC4D] rounded-sm">
             <img
-              src="../../../assets/images/heroSection2.svg"
+              src={heroSection2.svg}
               alt="hero section"
               className="w-[50px] h-[64px]"
             />

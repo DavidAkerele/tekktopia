@@ -2,7 +2,7 @@ import HeroImage from '../assets/images/contactUsImage.png';
 import Hero from '../components/Hero';
 export default function Career() {
   return (
-    <div className="w-full container mx-auto">
+    <div className="w-full  mx-auto">
       {/* Hero Section */}
       <Hero
         imageUrl={HeroImage}
