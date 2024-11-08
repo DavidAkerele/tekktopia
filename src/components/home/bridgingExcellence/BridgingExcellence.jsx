@@ -1,5 +1,5 @@
 // import React from 'react';
-
+import innovation1 from '../../../assets/images/innovation1.png'
 const BridgingExcellence = () => {
   return (
     <section className="bg-[#081527] w-full px-4 lg:px-16">
@@ -23,7 +23,7 @@ const BridgingExcellence = () => {
         <div className="flex flex-col lg:flex-row mt-16 items-center justify-center gap-[24px] h-auto w-full">
           <div className="w-full lg:w-[588px] h-auto relative">
             <img
-              src="/src/assets/images/innovation1.png"
+              src={innovation1}
               alt=""
               className="w-full h-full object-cover"
             />
