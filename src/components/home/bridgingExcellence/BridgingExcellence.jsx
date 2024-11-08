@@ -20,7 +20,7 @@ const BridgingExcellence = () => {
         </div>
 
         {/* Image Section with Overlay */}
-        <div className="flex flex-col lg:flex-row mt-16 items-center gap-[24px] h-auto w-full">
+        <div className="flex flex-col lg:flex-row mt-16 items-center justify-center gap-[24px] h-auto w-full">
           <div className="w-full lg:w-[588px] h-auto relative">
             <img
               src="/src/assets/images/innovation1.png"

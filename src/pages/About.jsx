@@ -4,39 +4,42 @@ import GetStarted from '../components/About/getStarted/GetStarted';
 import CompanyEthos from '../components/About/companyEthos/CompanyEthos';
 
 const About = () => {
-
-
   return (
-    <section className="mt-24">
-      {/*First about section*/}
+    <section className="mt-24 w-full">
+      {/* First about section */}
       <div className="relative">
-        <img
-          src="/about-banner.png"
-          alt=""
-          className="w-full h-[450px] sm:h-[650px] object-cover"
-        />
-        <div className="absolute w-full top-[180px]">
-          <div className=" flex flex-col items-center">
-            <img src="/about2.png" alt="" />
-            <p className="mt-3 text-[16px] text-white">ABOUT US</p>
-            <h1 className="text-[60px]  text-center mt-3 text-white font-[500]">
-              Crafting <br />
-              Customized Wealth Solutions:
-            </h1>
-          </div>
-        </div>
-      </div>
+  {/* Background Image */}
+  <img
+    src="/about-banner.png"
+    alt="About Banner"
+    className="w-full h-[300px] sm:h-[450px] md:h-[650px] object-cover"
+  />
 
-      {/*Second about section*/}
+  {/* Overlay Div */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center">
+    <img
+      src="/about2.png"
+      alt="About Us"
+      className="w-[120px] sm:w-[150px] lg:w-[180px] object-contain"
+    />
+    <p className="mt-4 text-sm sm:text-base text-white">ABOUT US</p>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-center text-white mt-3">
+      Crafting <br />
+      Customized Wealth Solutions
+    </h1>
+  </div>
+</div>
+
+      {/* Second about section */}
       <OurStory />
 
-      {/* fourth about section */}
+      {/* Fourth about section */}
       <AboutBanner />
 
-      {/* fifth about section */}
+      {/* Fifth about section */}
       <GetStarted />
 
-      {/* sixth about section */}
+      {/* Sixth about section */}
       <CompanyEthos />
     </section>
   );

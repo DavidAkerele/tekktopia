@@ -5,6 +5,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null); // Tracks the open submenu
   const [isHovering, setIsHovering] = useState(false); // Tracks if the user is hovering
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Tracks mobile menu open/close state
+  const [openSubMenu, setOpenSubMenu] = useState(null); // Tracks which mobile submenu is open
   const timeoutRef = useRef(null); // To store the timeout reference
 
   const navItems = [
@@ -19,14 +20,6 @@ const Navbar = () => {
         { name: 'UI/UX Design', href: '/services' },
       ],
     },
-    // {
-    //   name: 'Our Project',
-    //   href: '/projects',
-    //   subMenu: [
-    //     { name: 'Project One', href: '/projects' },
-    //     { name: 'Project Two', href: '/projects' },
-    //   ],
-    // },
     { name: 'Blog', href: '/blog' },
     { name: 'Career', href: '/career' },
     { name: 'Our Team', href: '/our-team' },
@@ -47,6 +40,7 @@ const Navbar = () => {
   };
 
   const handleMobileToggle = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleSubMenu = (name) => setOpenSubMenu(openSubMenu === name ? null : name);
 
   useEffect(() => {
     return () => {
@@ -92,7 +86,7 @@ const Navbar = () => {
                   {item.subMenu && <FiChevronDown className="ml-2" />}
                 </a>
 
-                {/* Dropdown menu */}
+                {/* Desktop Dropdown menu */}
                 {item.subMenu && openDropdown === item.name && isHovering && (
                   <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-20">
                     {item.subMenu.map((subItem) => (
@@ -166,6 +160,7 @@ const Navbar = () => {
                       ? 'bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2'
                       : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:bg-gray-700 hover:text-white px-3 py-2`
                   } block rounded-md text-base font-medium items-center`}
+                  onClick={() => item.subMenu && toggleSubMenu(item.name)}
                 >
                   {item.name}
                   {item.isButton && <FiChevronRight className="ml-2" />}
@@ -173,7 +168,7 @@ const Navbar = () => {
                 </a>
 
                 {/* Mobile dropdown */}
-                {item.subMenu && (
+                {item.subMenu && openSubMenu === item.name && (
                   <div className="ml-4 mt-2 space-y-1">
                     {item.subMenu.map((subItem) => (
                       <a
