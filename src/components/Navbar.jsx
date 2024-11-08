@@ -159,7 +159,7 @@ const Navbar = () => {
                     item.isButton
                       ? 'bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2'
                       : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:bg-gray-700 hover:text-white px-3 py-2`
-                  } block rounded-md text-base font-medium items-center`}
+                  }  rounded-md text-base font-medium flex items-center`}
                   onClick={() => item.subMenu && toggleSubMenu(item.name)}
                 >
                   {item.name}

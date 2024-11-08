@@ -43,45 +43,47 @@ const Testimonials = () => {
   const handleDotClick = (index) => {
     setCurrentTestimonial(index);
   };
+
   return (
-    <div>
-      <section className="mt-[120px]">
-        <h2 className="text-[32px] text-center font-[400]">Testimonials</h2>
+    <div className="w-full px-4">
+      <section className="mt-20 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Testimonials</h2>
       </section>
 
       <section className="py-12">
-        <div className="flex items-center justify-center overflow-hidden">
+        <div className="flex items-center justify-center">
           {/* Left Chevron */}
           <button
-            className="p-2 bg-[#4E7BFF] rounded-full hover:bg-gray-300"
+            aria-label="Previous testimonial"
+            className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transition"
             onClick={handlePrev}
           >
-            <HiOutlineArrowSmLeft size={30} color="white" />
+            <HiOutlineArrowSmLeft size={24} color="white" />
           </button>
 
           {/* Image and Text with Sliding Transition */}
-          <div className="relative max-w-[923px] h-64 mx-8 overflow-hidden ">
+          <div className="relative max-w-3xl w-full h-64 mx-4 overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-700 ease-in-out"
               style={{
                 transform: `translateX(-${currentTestimonial * 100}%)`,
               }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
-                  key={index}
-                  className="w-full flex-shrink-0 text-center flex flex-col justify-center items-center"
+                  key={testimonial.id}
+                  className="w-full flex-shrink-0 text-center flex flex-col justify-center items-center px-4"
                 >
                   <img
                     src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-[60px] h-[60px] rounded-full mx-auto object-cover bg-red-500"
+                    alt={`${testimonial.name}'s testimonial`}
+                    className="w-16 h-16 rounded-full object-cover bg-gray-200"
                   />
-                  <p className="mt-[8px] text-[#697D95]">{testimonial.name}</p>
-                  <p className="text-[#697D95B2] text-[14px]">
-                    {testimonial.role}
+                  <p className="mt-2 text-gray-800 font-medium">
+                    {testimonial.name}
                   </p>
-                  <p className="mt-[32px] text-gray-500 max-w-[639px]">
+                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                  <p className="mt-4 text-gray-600 max-w-lg">
                     &quot;{testimonial.text}&quot;
                   </p>
                 </div>
@@ -91,23 +93,25 @@ const Testimonials = () => {
 
           {/* Right Chevron */}
           <button
-            className="p-2 bg-[#4E7BFF] rounded-full hover:bg-gray-300"
+            aria-label="Next testimonial"
+            className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transition"
             onClick={handleNext}
           >
-            <HiOutlineArrowSmRight size={30} color="white" />
+            <HiOutlineArrowSmRight size={24} color="white" />
           </button>
         </div>
 
         {/* Dot Pagination */}
         <div className="mt-8 flex justify-center space-x-2">
           {testimonials.map((_, index) => (
-            <span
+            <button
               key={index}
-              className={`h-3 w-3 rounded-full cursor-pointer ${
-                index === currentTestimonial ? 'bg-blue-500' : 'bg-gray-300'
-              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+              className={`h-3 w-3 rounded-full ${
+                index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-400'
+              } transition-colors duration-300`}
               onClick={() => handleDotClick(index)}
-            ></span>
+            ></button>
           ))}
         </div>
       </section>
