@@ -13,11 +13,13 @@ const Navbar = () => {
     { name: 'About', href: '/about' },
     {
       name: 'Services',
-      href: '/services',
       subMenu: [
-        { name: 'Web Development', href: '/services' },
-        { name: 'App Development', href: '/services' },
-        { name: 'UI/UX Design', href: '/services' },
+        { name: 'Data & Analytics', href: '/services' },
+        { name: 'IT Support and Infrastructure', href: '/services' },
+        { name: 'Software Development and Engineering', href: '/services' },
+        { name: 'Consultancy and Strategy', href: '/services' },
+        { name: 'Brand Identity', href: '/services' },
+        { name: 'Cloud computing services', href: '/services' },
       ],
     },
     { name: 'Blog', href: '/blog' },

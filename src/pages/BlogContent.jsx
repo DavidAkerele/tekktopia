@@ -6,6 +6,8 @@ import {
 } from 'react-icons/fa6';
 import { useParams } from 'react-router-dom';
 
+import blogimg from '../assets/images/blogHeroImage.png';
+
 export const BlogContent = () => {
   const { name } = useParams();
 
@@ -28,6 +30,9 @@ export const BlogContent = () => {
           <FaLinkedin />
           <FaFacebook />
           <FaInstagram />
+        </div>
+        <div>
+          <img src={blogimg} alt="blog image" className="w-full " />
         </div>
       </div>
       <div className="flex flex-col gap-4">
