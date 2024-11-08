@@ -2,7 +2,7 @@ import dataAnalyticIcon from '../../../../public/dataAnalyticsIcon.png';
 import consultancyIcon from '../../../../public/consultancyIcon.png';
 import emergingTechIcon from '../../../../public/emergingTechIcon.png';
 import itSupportIcon from '../../../../public/itSupportIcon.png';
-// import softwareDevIcon from '../../../../public/softwareDevIcon.png';
+import softwareDevIcon from '../../../../public/softwareDevIcon.png';
 
 import ServiceCategory from '../.././ServiceCategory';
 
@@ -23,7 +23,7 @@ export default function ServiceCategories() {
     [
       {
         bgColor: 'blueGradient',
-        // icon: softwareDevIcon,
+        icon: softwareDevIcon,
         title: 'Software Development & Engineering',
       },
     ],
