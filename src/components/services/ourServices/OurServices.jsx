@@ -7,7 +7,7 @@ const OurServices = () => {
         <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
           Our Services
           <img
-            src="/src/assets/images/yellowLine.png"
+            src="../../../assets/images/yellowLine.png"
             alt="yellow line"
             className="w-full my-2 h-[3px]"
           />

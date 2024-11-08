@@ -58,7 +58,7 @@ const HomeHero = () => {
           <div className="flex align-center justify-between mt-[8px] p-[12px] box-border border-[#CCCCCC4D] border-[1px] rounded-sm">
             <div className="w-[50px] h-[64px]">
               <img
-                src="/src/assets/images/heroSection2.svg"
+                src="../../../assets/images/heroSection2.svg"
                 alt=""
                 className="w-[50px] h-[64px]"
               />
