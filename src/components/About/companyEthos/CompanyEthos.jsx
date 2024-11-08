@@ -21,32 +21,36 @@ const CompanyEthos = () => {
 
   return (
     <section className="mt-[176px]">
-      <div className="flex flex-row justify-between">
-        <div className="relative w-[700px] h-[750px] ">
-          <img src="/src/assets/images/about/About4.png" alt="" />
+      <div className="flex flex-col lg:flex-row justify-between">
+        {/* Left Image Section */}
+        <div className="relative w-full lg:w-[700px] h-[750px] mb-8 lg:mb-0">
+          <img
+            src="/src/assets/images/about/About4.png"
+            alt="Company Ethos Overview"
+            className="object-cover w-full h-full"
+          />
           <div className="flex flex-col items-center justify-between h-[506px] w-[150px] absolute top-[32px] right-[32px]">
-            <div className="w-full h-[150px] bg-[#0000004D] rounded-[30px] flex flex-col items-center justify-center text-[white]">
-              <div className="text-[50px] mb-[2px]">1</div>
-              <div>Mission</div>
-            </div>
-            <div className="w-full h-[150px] bg-[#0000004D] rounded-[30px] flex flex-col items-center justify-center text-[white]">
-              <div className="text-[50px] mb-[2px]">2</div>
-              <div>Vision</div>
-            </div>
-            <div className="w-full h-[150px] bg-[#0000004D] rounded-[30px] flex flex-col items-center justify-center text-[white]">
-              <div className="text-[50px] mb-[2px]">3</div>
-              <div>Core Values</div>
-            </div>
+            {['Mission', 'Vision', 'Core Values'].map((title, index) => (
+              <div
+                key={index}
+                className="w-full h-[150px] bg-[#0000004D] rounded-[30px] flex flex-col items-center justify-center text-[white]"
+              >
+                <div className="text-[50px] mb-[2px]">{index + 1}</div>
+                <div>{title}</div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex flex-col gap-[32px] items-center w-[544px]">
+
+        {/* Right Cards Section */}
+        <div className="flex flex-col gap-[32px] items-center w-full lg:w-[544px]">
           {cards.map((card, index) => (
             <div
               className="w-full h-[304px] bg-[#F8F8FA] p-[40px] box-border rounded-[20px]"
               key={index}
             >
               <ShadedTriangleIcon />
-              <div className="mt-[78px]">
+              <div className="mt-[40px]">
                 <div className="text-[16px] font-bold">{card.title}</div>
                 <div className="text-[14px] text-[#697D95B2] mt-[12px]">
                   {card.description}

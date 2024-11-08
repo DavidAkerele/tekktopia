@@ -15,7 +15,7 @@ const AboutBanner = () => {
         <div className="text-[32px] text-center">
           There is no one who loves pain itself, <br /> who seeks after it and.
         </div>
-        <div className="w-[700px] h-450px] mt-[52px] z-2">
+        <div className="w-[700px] h-[450px] mt-[52px] z-2">
           <img
             src="/src/assets/images/about/About3.png"
             alt=""
@@ -27,7 +27,7 @@ const AboutBanner = () => {
           <div className="mt-[12px] text-[14px] font-extralight tracking-wider">
             In a changing global economy, HydrogenHR gives you the ultimate
             enterprise advantage with our People Management Software. We
-            automate everyday mundane tasks so you can focus on your business'
+            automate everyday mundane tasks so you can focus on your business
             core operations.
           </div>
         </div>

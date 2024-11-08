@@ -1,8 +1,9 @@
-import dataAnalyticIcon from '../../../../public/dataAnalyticsIcon.png';
-import consultancyIcon from '../../../../public/consultancyIcon.png';
-import emergingTechIcon from '../../../../public/emergingTechIcon.png';
-import itSupportIcon from '../../../../public/itSupportIcon.png';
-// import softwareDevIcon from '../../../../public/softwareDevIcon.png';
+import dataAnalyticIcon from '../../../assets/icons/dataAnalyticsIcon.png';
+import consultancyIcon from '../../../assets/icons/consultancyIcon.png';
+import emergingTechIcon from '../../../assets/icons/emergingTechIcon.png';
+import itSupportIcon from '../../../assets/icons/itSupportIcon.png';
+
+import softwareDevIcon from '../../../assets/icons/softwareDevIcon.png';
 
 import ServiceCategory from '../.././ServiceCategory';
 
@@ -23,7 +24,7 @@ export default function ServiceCategories() {
     [
       {
         bgColor: 'blueGradient',
-        icon: emergingTechIcon,
+        icon: softwareDevIcon,
         title: 'Software Development & Engineering',
       },
     ],

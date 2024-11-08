@@ -13,10 +13,7 @@ export default function Footer() {
   const socialLinks = [
     { text: 'LinkedIn', href: 'https://www.linkedin.com/company/tekktopia/' },
     { text: 'Facebook', href: '#' },
-    {
-      text: 'Instagram',
-      href: 'https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==',
-    },
+    { text: 'Instagram', href: 'https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==' },
     { text: 'Twitter', href: '#' },
   ];
 
@@ -27,34 +24,35 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bottom-0 footer bg-[#081527] lg:px-6 h-[505px] py-[171px] flex items-center justify-center text-[white] box-border md:h-[705px]">
-      <div className="w-[1280px]">
-        <div className="flex justify-between w-full gap-[143px]">
-          <div className="max-w-[264px]">
-            <div className="flex items-center text-[30px]">
+    <footer className="w-full bg-[#081527] py-[60px] md:py-[100px] lg:py-[171px] text-white box-border">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[143px]">
+          {/* Left Section: Logo and Address */}
+          <div className="flex flex-col text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start text-[30px] mb-4">
               <div className="w-[44px] h-[44px]">
-                <img src="/src/assets/images/tekktopia.png" alt="" />
+                <img src="/src/assets/images/tekktopia.png" alt="Tekktopia Logo" />
               </div>
               <span className="text-[#f5901f] ml-[10px]">t</span>eKK
               <span className="text-[#137cc6]">t</span>opia
             </div>
-            <div className="text-[15px] text-[#CBCBCB] mt-[16px] lg:text-[14px]">
+            <div className="text-[15px] text-[#CBCBCB] lg:text-[14px]">
               Lagos: <br />
               43, Baale Street, Idado Estate, Igbo-Efon, Off Lekki - Epe
               Expressway, Lagos State, Nigeria.
             </div>
           </div>
-          <div className="grid w-[874px] tracking-wider lg:w-[874px] md:w-[427px] gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 sm:grid-cols-1">
+
+          {/* Right Section: Links */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div>
-              <div className="text-[18px] mb-[24px] lg:text-[16px] md:text-[16px]">
-                Company
-              </div>
+              <div className="text-[18px] mb-4 text-center lg:text-left">Company</div>
               <div>
                 {companyLinks.map((link, index) => (
                   <div key={index} className="mb-[16px]">
                     <a
                       href={link.href}
-                      className="text-[16px] font-extralight lg:text-[14px] md:text-[14px]"
+                      className="text-[16px] font-extralight hover:text-[#f5901f] lg:text-[14px]"
                     >
                       {link.text}
                     </a>
@@ -63,15 +61,13 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <div className="text-[18px] mb-[24px] lg:text-[16px] md:text-[16px]">
-                Products
-              </div>
+              <div className="text-[18px] mb-4 text-center lg:text-left">Products</div>
               <div>
                 {productLinks.map((link, index) => (
-                  <div key={index} className="">
+                  <div key={index}>
                     <a
                       href={link.href}
-                      className="text-[16px] font-extralight lg:text-[14px] md:text-[14px]"
+                      className="text-[16px] font-extralight hover:text-[#f5901f] lg:text-[14px]"
                     >
                       {link.text}
                     </a>
@@ -80,15 +76,13 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <div className="text-[18px] mb-[24px] lg:text-[16px] md:text-[16px]">
-                Stay Connected
-              </div>
+              <div className="text-[18px] mb-4 text-center lg:text-left">Stay Connected</div>
               <div>
                 {socialLinks.map((link, index) => (
                   <div key={index} className="mb-[16px]">
                     <a
                       href={link.href}
-                      className="text-[16px] font-extralight lg:text-[14px] md:text-[14px]"
+                      className="text-[16px] font-extralight hover:text-[#f5901f] lg:text-[14px]"
                     >
                       {link.text}
                     </a>
@@ -97,15 +91,13 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <div className="text-[18px] mb-[24px] lg:text-[16px] md:text-[16px]">
-                Reach Us
-              </div>
+              <div className="text-[18px] mb-4 text-center lg:text-left">Reach Us</div>
               <div>
                 {contactInfo.map((link, index) => (
                   <div key={index} className="mb-[16px]">
                     <a
                       href={link.href}
-                      className="text-[16px] font-extralight lg:text-[14px] md:text-[14px]"
+                      className="text-[16px] font-extralight hover:text-[#f5901f] lg:text-[14px]"
                     >
                       {link.text}
                     </a>
@@ -115,9 +107,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-between items-center mt-[76px] text-[16px] font-extralight tracking-wider lg:text-[14px] md:text-[14px]">
-          <div>© 2024 All Rights Reserved</div>
-          <div className="flex items-center gap-[24px] lg:text-[14px]">
+
+        {/* Bottom Section: Copyright and Legal Links */}
+        <div className="mt-12 text-center lg:text-left flex justify-between items-center flex-col lg:flex-row">
+          <div className="text-[16px] font-extralight tracking-wider lg:text-[14px]">
+            © 2024 All Rights Reserved
+          </div>
+          <div className="flex gap-6 lg:text-[14px] text-[16px] font-extralight tracking-wider">
             <div>Terms & Condition</div>
             <div>Privacy Policy</div>
             <div>FAQs</div>

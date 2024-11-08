@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 const AnimatedLines = ({ direction = 'right' }) => {
   // Define the lines with different widths
@@ -41,6 +42,10 @@ const AnimatedLines = ({ direction = 'right' }) => {
       ))}
     </div>
   );
+};
+
+AnimatedLines.propTypes = {
+  direction: PropTypes.oneOf(['right', 'left']),
 };
 
 export default AnimatedLines;

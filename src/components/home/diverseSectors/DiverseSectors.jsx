@@ -3,24 +3,27 @@ import { GrStatusGood } from 'react-icons/gr';
 
 const DiverseSectors = () => {
   return (
-    <section className="mt-40">
-      <div className="flex items-center justify-center gap-12">
-        <div className="w-[600px] h-[650px] flex justify-center items-center bg-gradient-to-br from-[#041429] from-[60%] to-[#244674] to-[100%] rounded-[12px]">
-          <div className="p-[10px] box-border border-[1px] border-[#1e2c3e] rounded-md">
+    <section className="mt-40 px-4 lg:px-16">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+        {/* Image Container */}
+        <div className="w-full max-w-[600px] h-auto flex justify-center items-center bg-gradient-to-br from-[#041429] from-[60%] to-[#244674] to-[100%] rounded-[12px]">
+          <div className="p-4 box-border border-[1px] border-[#1e2c3e] rounded-md">
             <img
               src="/src/assets/images/home3.svg"
               alt=""
-              className="w-[472px] h-[522px]"
+              className="w-full h-auto max-w-[472px] max-h-[522px] object-cover"
             />
           </div>
         </div>
-        <div className="w-[588px]">
-          <h3 className="text-[32px] text-[#0B0B0B] leading-[45px]">
+
+        {/* Text Section */}
+        <div className="text-center lg:text-left max-w-[900px] px-4">
+          <h3 className="text-[28px] lg:text-[32px] text-[#0B0B0B] leading-[40px] lg:leading-[45px]">
             Bridging excellence and innovation across diverse sectors.
           </h3>
-          <p className="mt-2 leading-[24px] text-[14px] text-[#697D95B2] font-[400]">
+          <p className="mt-2 text-[14px] lg:text-[16px] text-[#697D95B2] font-[400] leading-[22px] lg:leading-[24px]">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            ccusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
             ab illo inventore veritatis et quasi architecto beatae vitae dicta
             sunt lorem ispum.
           </p>
@@ -31,7 +34,7 @@ const DiverseSectors = () => {
             {Array(4)
               .fill()
               .map((_, index) => (
-                <div key={index} className="">
+                <div key={index}>
                   <p className="pb-4 flex text-[16px] font-[400] items-center gap-4">
                     <GrStatusGood className="text-[#A66928]" /> Poluptatem
                     accusantium dolore laudantium, totam rem.

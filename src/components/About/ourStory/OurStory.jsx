@@ -23,7 +23,7 @@ const OurStory = () => {
       image: '/about3.png',
       title: 'Expansion',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat aliquam, faucibus erat a, dictum erat aliquam, faucibus erat a, dictum erat.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat aliquam, faucibus erat a, dictum erat.',
     },
     {
       year: '2024',
@@ -50,11 +50,11 @@ const OurStory = () => {
   return (
     <div>
       <section className="mt-[120px]">
-        <div className="flex gap-[80px] justify-center">
+        <div className="flex flex-col md:flex-row gap-[80px] justify-center">
           <div className="max-w-[620px] flex flex-col justify-center">
             <p className="text-[14px] font-medium mb-4">OUR STORY</p>
             <h2 className="text-[32px] mb-4">How We Started Till Date</h2>
-            <p className="text-[#697D95B2] text-[14px] w-[600px]">
+            <p className="text-[#697D95B2] text-[14px] w-full sm:w-[600px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in
               ligula aliquam, faucibus erat a, dictum erat. Aliquam rutrum eget
               odio et mattis. Sed laoreet porta condimentum. Phasellus
@@ -65,7 +65,7 @@ const OurStory = () => {
           </div>
 
           <div
-            className="relative w-[580px] h-[400px] cursor-pointer"
+            className="relative w-full sm:w-[580px] h-[400px] cursor-pointer"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
@@ -80,8 +80,8 @@ const OurStory = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                   >
-                    <img src={year.image} alt="" className="w-full h-full" />
-                    <div className="top-0 absolute h-full flex flex-col justify-between px-[30px] box-border py-[30px]">
+                    <img src={year.image} alt="" className="w-full h-full object-cover" />
+                    <div className="top-0 absolute h-full flex flex-col justify-between px-[30px] py-[30px] box-border">
                       <h1 className="text-[32px] text-white font-extrabold">
                         {year.year}
                       </h1>
@@ -97,8 +97,9 @@ const OurStory = () => {
           </div>
         </div>
       </section>
-      <section className="flex gap-[80px] justify-center mt-[120px]">
-        <div className="w-[580px] h-[400px]">
+
+      <section className="flex flex-col sm:flex-row gap-[80px] justify-center mt-[120px]">
+        <div className="w-full sm:w-[580px] h-[400px]">
           <img
             src="/src/assets/images/about/About2.png"
             alt=""
@@ -107,17 +108,16 @@ const OurStory = () => {
         </div>
         <div className="max-w-[620px] flex flex-col justify-center px-[40px] box-border">
           <h2 className="text-[32px] mb-4">
-            We offer diverse tech related solutions to our diverse range of
+            We offer diverse tech-related solutions to our diverse range of
             clients
           </h2>
-          <p className="text-[#697D95B2] text-[14px] w-[600px]">
+          <p className="text-[#697D95B2] text-[14px] w-full sm:w-[600px]">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            ccusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
             ab illo inventore veritatis et quasi architecto beatae vitae dicta
-            sunt lorem ispum b illo inventore veritatis et quasi architecto
-            beatae vitae dicta sunt lorem ispum.
+            sunt lorem ispum.
           </p>
-          <ul>
+          <ul className="list-none mt-[16px]">
             <li className="flex items-center mt-[16px]">
               <TriangleIcon />
               <div className="ml-[8px] text-[14px] text-[#697D95B2]">

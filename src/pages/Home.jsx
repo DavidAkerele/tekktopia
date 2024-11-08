@@ -8,7 +8,7 @@ import LatestArticles from '../components/home/LatestArticles/LatestArticles';
 
 const Home = () => {
   return (
-    <section className="mt-24 md:mt-44 ">
+    <section className=" w-full flex-col flex items-center justify-center mt-24 md:mt-44 ">
       {/* First Home Section */}
       <HomeHero />
 
