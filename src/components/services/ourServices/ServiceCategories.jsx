@@ -13,12 +13,16 @@ export default function ServiceCategories() {
       {
         bgColor: 'purpleGradient',
         icon: dataAnalyticIcon,
-        title: 'Data & Analytics',
+        title: 'Data Analytics and Business Intelligence',
+        descriptionText:
+          'Unlock the power of your data! We turn complex data into clear insights, helping you make smart decisions.',
       },
       {
         bgColor: 'grayGradient',
         icon: itSupportIcon,
         title: 'IT Support & Infrastructure',
+        descriptionText:
+          'Our IT consulting services cover everything tech related to your business needs.',
       },
     ],
     [
@@ -26,28 +30,31 @@ export default function ServiceCategories() {
         bgColor: 'blueGradient',
         icon: softwareDevIcon,
         title: 'Software Development & Engineering',
+        descriptionText:
+          'We create smooth, user friendly mobile and web apps that bring your ideas to life.',
       },
     ],
     [
       {
         bgColor: 'greenGradient',
         icon: emergingTechIcon,
-        title: 'Emerging Technologies',
+        title: 'Cloud Computing Services',
+        descriptionText:
+          'Our cloud services give your business flexibility and security, making it easy to adapt to new challenges.',
       },
       {
         bgColor: 'grayGradient',
         icon: consultancyIcon,
-        title: 'Consultancy & Strategy',
+        title: 'Brand Identity & Design ',
+        descriptionText:
+          'Your brand deserves to stand out! We build your brand’s look and feel that connects with your audience.',
       },
     ],
   ];
 
-  const descriptionText =
-    'Urna auctor sed dictum libero vestibulum orci a imperdiet quisque nullam nam.';
-
   const renderCategoryColumn = (categoryList, isFullHeight = false) => (
     <div className="lg:w-1/3 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-      {categoryList.map(({ bgColor, icon, title }, index) => (
+      {categoryList.map(({ bgColor, icon, title, descriptionText }, index) => (
         <ServiceCategory
           key={title}
           bgColor={bgColor}

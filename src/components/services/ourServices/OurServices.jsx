@@ -12,8 +12,8 @@ const OurServices = () => {
             className="w-full my-2 h-[3px]"
           />
         </h2>
-        <p className="text-[22px] font-500 text-center">
-          Our world class services that are unbeatable by no other
+        <p className="text-[22px] font-semibold text-center">
+          World class services isn’t just a claim, it’s our commitment
         </p>
       </div>
       <ServiceCategories />
