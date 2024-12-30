@@ -2,7 +2,7 @@ import TriangleIcon from '../../../icons/TriangleIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-import About2 from '../../../assets/images/about/About2.png'
+import About2 from '../../../assets/images/about/About2.png';
 
 const OurStory = () => {
   const yearData = [
@@ -45,12 +45,19 @@ const OurStory = () => {
   return (
     <div>
       <section className="mt-[120px]">
-        <div className="flex flex-col md:flex-row gap-[80px] justify-center px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row gap-[40px]  justify-center px-4 sm:px-6 ldg:px-8">
           <div className="max-w-[620px] flex flex-col justify-center">
             <p className="text-[14px] font-medium mb-4">OUR STORY</p>
-            <h2 className="text-[24px] sm:text-[32px] mb-4">How We Started Till Date</h2>
+            <h2 className="text-[24px] sm:text-[32px] mb-4">
+              How We Started Till Date
+            </h2>
             <p className="text-[#697D95B2] text-[14px] sm:text-[16px] w-full sm:w-[600px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat. Aliquam rutrum eget odio et mattis. Sed laoreet porta condimentum. Phasellus sollicitudin lobortis porta. Donec a eros quis nunc pretium egestas. Ut ultrices sed leo non vestibulum. Nullam ac nulla suscipit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in
+              ligula aliquam, faucibus erat a, dictum erat. Aliquam rutrum eget
+              odio et mattis. Sed laoreet porta condimentum. Phasellus
+              sollicitudin lobortis porta. Donec a eros quis nunc pretium
+              egestas. Ut ultrices sed leo non vestibulum. Nullam ac nulla
+              suscipit.
             </p>
           </div>
 
@@ -70,7 +77,11 @@ const OurStory = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                   >
-                    <img src={year.image} alt={year.title} className="w-full h-full object-cover" />
+                    <img
+                      src={year.image}
+                      alt={year.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="top-0 absolute h-full flex flex-col justify-between px-[30px] py-[30px] box-border">
                       <h1 className="text-[24px] sm:text-[32px] text-white font-extrabold">
                         {year.year}
@@ -98,34 +109,38 @@ const OurStory = () => {
         </div>
         <div className="max-w-[620px] flex flex-col justify-center px-[40px] box-border">
           <h2 className="text-[24px] sm:text-[32px] mb-4">
-            We offer diverse tech-related solutions to our diverse range of clients
+            We offer diverse tech-related solutions to our diverse range of
+            clients
           </h2>
-          <p className="text-[#697D95B2] text-[14px] sm:text-[16px] w-full sm:w-[600px]">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt lorem ispum.
+          <p className="text-[#697D95B2] text-[14px] sm:text-[16px] w-full">
+            We deliver a range of tech solutions designed to meet the unique
+            needs of every client we work with. From startups to established
+            businesses, we’re here to simplify technology and empower you to
+            achieve your goals with confidence.
           </p>
           <ul className="list-none mt-[16px]">
             <li className="flex items-center mt-[16px]">
               <TriangleIcon />
               <div className="ml-[8px] text-[14px] sm:text-[16px] text-[#697D95B2]">
-                Lorem Ispum eit
+                Cloud Solutions
               </div>
             </li>
             <li className="flex items-center mt-[16px]">
               <TriangleIcon />
               <div className="ml-[8px] text-[14px] sm:text-[16px] text-[#697D95B2]">
-                Lorem Ispum eit
+                Cybersecurity Solutions
               </div>
             </li>
             <li className="flex items-center mt-[16px]">
               <TriangleIcon />
               <div className="ml-[8px] text-[14px] sm:text-[16px] text-[#697D95B2]">
-                Lorem Ispum eit
+                Data Analytics and Business Intelligence
               </div>
             </li>
             <li className="flex items-center mt-[16px]">
               <TriangleIcon />
               <div className="ml-[8px] text-[14px] sm:text-[16px] text-[#697D95B2]">
-                Lorem Ispum eit
+                Web and Mobile App Development
               </div>
             </li>
           </ul>
