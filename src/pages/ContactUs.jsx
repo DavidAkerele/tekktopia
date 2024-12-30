@@ -32,8 +32,8 @@ export default function ContactUs() {
       {/* Hero Section */}
       <Hero
         imageUrl={contactUsImage}
-        topText="Creating Prosperity,"
-        bottomText="Ensuring Tomorrow's Success"
+        topText="Let’s build something"
+        bottomText=" extraordinary together"
       />
 
       {/* Contact Info Section */}

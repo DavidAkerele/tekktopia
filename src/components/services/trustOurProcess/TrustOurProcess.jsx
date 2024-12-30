@@ -48,7 +48,7 @@ const TrustOurProcess = () => {
   return (
     <section className="w-full bg-[url('/qualityAssuranceBg.png')] p-12 mt-[100px] rounded-md">
       <div className="mx-auto  gap-5 flex flex-col lg:flex-row text-white items-center">
-        <div className="lg:w-[40%] mr-auto flex flex-col">
+        <div className="lg:w-[60%] mr-auto flex flex-col">
           <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
             Trust Us Process
             <img
@@ -61,14 +61,17 @@ const TrustOurProcess = () => {
             Our world class services that are unbeatable by no other
           </p>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt lorem ipsum b illo inventore veritatis et quasi
-            architecto beatae vitae dicta sunt lorem ipsum.
+            With Tekktopia, you’re not just getting a service, you’re gaining a
+            partner. We’re dedicated to building trust through reliable support,
+            quick response times, and a commitment to keeping your technology
+            running flawlessly.
+            <br/><br/>
+            Focus on growing your business while we take
+            care of your IT. We’re here to make your technology work as hard as
+            you do.
           </p>
         </div>
-        <div className="w-full gap-3 h-[158px] flex flex-col justify-between">
+        <div className="w-full lg:w-[40%] gap-3 h-[158px] flex flex-col justify-between">
           {progressBarData.map((item, index) => (
             <div key={index}>
               <div className="text-[white]">{item.text}</div>
