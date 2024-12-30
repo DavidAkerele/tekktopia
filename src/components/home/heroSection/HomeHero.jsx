@@ -1,15 +1,13 @@
 import { FiChevronRight } from 'react-icons/fi';
 
-import home1 from '../../../assets/images/home1.png'
-import heroSection2 from '../../../assets/images/heroSection2.svg'
-
+import home1 from '../../../assets/images/home1.png';
 
 const HomeHero = () => {
   return (
     <div className=" px-4 sm:px-6 lg:px-8 flex flex-col items-center">
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 text-center md:text-left">
         <h1 className="text-[24px] sm:text-[28px] md:text-[60px] font-medium text-[#0B0B0B] leading-tight">
-          We manage your IT, so
+          Simplifying Technology,
         </h1>
         <div className="flex mt-4 md:mt-0 relative">
           <img src="/Ellipse23.png" alt="ellipse23" className="relative" />
@@ -27,13 +25,13 @@ const HomeHero = () => {
       </div>
 
       <h2 className="text-[24px] sm:text-[28px] md:text-[60px] bg-gradient-to-r from-[#67BDD5] to-[#4B82CA] text-transparent font-medium bg-clip-text mt-4 text-center leading-tight">
-        you can manage your business.
+        Empowering Your Business
       </h2>
 
       <p className="text-[#697D95B2] text-[12px] sm:text-[14px] md:text-[16px] mt-4 max-w-[865px] text-center">
-        Welcome to TechTopia, where innovation meets expertise in the dynamic
-        world of IT. We deliver cutting-edge solutions tailored to meet the
-        needs of our clients.
+        Imagine a world where your technology works seamlessly in the background
+        while you focus on growing your business. That’s what we do at Tekktopia
+        , helping you navigate the complex world of IT with ease
       </p>
 
       <div className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -51,22 +49,22 @@ const HomeHero = () => {
           className="mx-auto w-full max-w-[1240px] h-auto"
           alt="hero"
         />
-        <div className="absolute hidden sm:block top-[-40px] left-[180px] w-[265px] h-[148px] bg-white/30 backdrop-blur-sm shadow-lg rounded-md p-[16px]">
+        <div className="absolute hidden sm:block top-[-40px] left-[180px] w-[289px] bg-white/80 backdrop-blur-sm shadow-lg rounded-md p-[16px]">
           <div className="text-[12px] text-[#697D95B2]">
-            Welcome to Tekktopia
+            Welcome to Tekktopia, your hub for advanced cloud and IT solutions.
+            Explore how we can help your business grow and stay ahead of the
+            curve.
           </div>
           <div className="flex items-center justify-between mt-[8px] p-[12px] border border-[#CCCCCC4D] rounded-sm">
             <img
-              src={heroSection2.svg}
+              src="/public/tekktopia-logo.png"
               alt="hero section"
-              className="w-[50px] h-[64px]"
+              className="w-[50px] h-[53px]"
             />
             <div className="ml-[12px]">
-              <div className="text-[14px]">
-                Welcome to Tekktopia lorem ipsum
-              </div>
+              <div className="text-[14px]">Akinola Daniel Oshinubi</div>
               <div className="text-[12px] text-[#697D95B2] mt-[4px]">
-                by Akinola Ireoluwa
+                Founder & MD Tekktopia
               </div>
             </div>
           </div>
