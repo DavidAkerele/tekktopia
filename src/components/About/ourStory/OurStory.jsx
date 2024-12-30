@@ -7,30 +7,23 @@ import About2 from '../../../assets/images/about/About2.png'
 const OurStory = () => {
   const yearData = [
     {
-      year: '2021',
-      image: '/about3.png',
+      year: '2023',
+      image: '/about-2023.png',
       title: 'The Beginning',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat.',
     },
     {
-      year: '2022',
-      image: '/about3.png',
+      year: '2024',
+      image: '/about-2024.png',
       title: 'Growth',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat.',
-    },
-    {
-      year: '2023',
-      image: '/about3.png',
-      title: 'Expansion',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat aliquam, faucibus erat a, dictum erat.',
     },
     {
-      year: '2024',
-      image: '/about3.png',
-      title: 'Future Vision',
+      year: '2025',
+      image: '/about-2025.png',
+      title: 'Present',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ligula aliquam, faucibus erat a, dictum erat.',
     },
