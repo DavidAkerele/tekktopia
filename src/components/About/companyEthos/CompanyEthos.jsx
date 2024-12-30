@@ -7,17 +7,17 @@ const CompanyEthos = () => {
     {
       title: 'Mission',
       description:
-        'After setting up your account, add recipients by entering their details and selecting their preferred payout method. Save these details for even faster future transactions.',
+        'We have tasked ourselves with raising the standard of technology provided in the region by providing quality technical solutions for your business needs.',
     },
     {
       title: 'Vision',
       description:
-        'After setting up your account, add recipients by entering their details and selecting their preferred payout method. Save these details for even faster future transactions.',
+        'Tekktopia aims to revolutionize cloud and IT services with scalable solutions. Our goal is to enhance the marketability of businesses, positioning them as next-level players in their respective fields.',
     },
     {
       title: 'Core Values',
       description:
-        'After setting up your account, add recipients by entering their details and selecting their preferred payout method. Save these details for even faster future transactions.',
+        'Our core value is to create solutions that truly empower individuals and businesses, making life simpler, more connected, and full of opportunities. We’re committed to putting human experiences at the heart of every innovation we drive.',
     },
   ];
 
