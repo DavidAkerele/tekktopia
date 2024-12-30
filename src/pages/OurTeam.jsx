@@ -17,8 +17,8 @@ export default function OurTeam() {
       {/* Hero Section */}
       <Hero
         imageUrl={TeamImage}
-        topText="On the other hand,"
-        bottomText="we denounce with."
+        topText="Meet the minds behind the innovation,"
+        bottomText="driven by passion, united by purpose."
       />
 
       {/* Our Team Section */}
@@ -50,11 +50,12 @@ export default function OurTeam() {
             </h2>
             <img src={yellowLine} alt="yellow line" className="w-1/5 h-[3px]" />
             <p className="text-left text-[14px] text-gray-500 mt-2">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt lorem ipsum b illo inventore veritatis et quasi
-              architecto beatae vitae dicta sunt lorem ipsum.
+              At Tekktopia, we believe that great work starts with a great team.
+              Our people are the heart of what we do, and together, we bring a
+              mix of creativity, expertise, and passion to every project. We’re
+              not just tech enthusiasts,we’re problem solvers, innovators, and
+              partners who care about making a difference for your business. Get
+              to know the amazing individuals behind the magic.
             </p>
           </div>
         </div>

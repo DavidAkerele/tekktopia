@@ -6,33 +6,39 @@ export default function TeamMembers() {
   // Array of team member objects with their details
   const teamMembers = [
     {
-      name: 'IREOLUWA ADEOLUWA',
-      imageUrl: teamMember,
-      role: 'CTO',
+      name: 'AKINOLA DANIEL OSHINUBI',
+      imageUrl: "/daniel-oshinubi.png",
+      role: 'Founder & MD/CEO',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
-      name: 'IREOLUWA ADEOLUWA',
-      imageUrl: teamMember,
-      role: 'CTO',
+      name: 'BOLUWATIFE ONI',
+      imageUrl: "/tife-oni.png",
+      role: 'Head, Sales & Business Devel...',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
-      name: 'IREOLUWA ADEOLUWA',
-      imageUrl: teamMember,
-      role: 'CTO',
+      name: 'OLUWADAMILARE ADEKOYA',
+      imageUrl: "/dami-adekoya.png",
+      role: 'Product Manager',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
-      name: 'IREOLUWA ADEOLUWA',
-      imageUrl: teamMember,
-      role: 'CTO',
+      name: 'OREOLUWA LEO-DADA',
+      imageUrl: "/ore-dada.png",
+      role: 'Digital Marketing Executive',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
-      name: 'IREOLUWA ADEOLUWA',
+      name: 'AKERELE DAVID',
       imageUrl: teamMember,
-      role: 'CTO',
+      role: 'Head. Software Development',
+      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
+    },
+    {
+      name: 'SAMUEL OLAWUMI',
+      imageUrl: "/samuel-olawumi.jpg",
+      role: 'Frontend Developer',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
