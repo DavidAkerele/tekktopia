@@ -13,17 +13,17 @@ export default function ContactUs() {
     {
       icon: 'FaPhone',
       title: 'Call Us at',
-      info: '1234567890',
+      info: ['+234 815 433 2992', '+234 810 596 3769', '+234 909 330 9638'],
     },
     {
       icon: 'FaMapMarkerAlt',
       title: 'Location',
-      info: 'Anywhere street, Anywhere city',
+      info: ['43, Baale Street, Idado Estate, Igbo-Efon, Off Lekki - Epe Expressway, Lagos State, Nigeria.'],
     },
     {
       icon: 'FaEnvelope',
       title: 'Send us a mail',
-      info: '1234567890',
+      info: ['info@tekktopia.com'],
     },
   ];
 
@@ -43,17 +43,14 @@ export default function ContactUs() {
             Contact Information
           </h2>
           <img src={yellowLine} alt="yellow line" className="w-1/4 h-[3px]" />
-          <p className="text-left text-xs lg:text-[14px] mt-2">
-            But I must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account of the system, and expound the actual teachings of the great
-            explorer of the truth, the master-builder of human happiness. No one
-            rejects, dislikes, or avoids pleasure itself, because it is
-            pleasure, but because those who do not know how to pursue pleasure
-            rationally encounter consequences that are extremely painful.
+          <p className="text-left text-xs lg:text-[14px] leading-6 mt-2">
+            We’re committed to responding promptly and ensuring your experience
+            with us is seamless. Whether you have a question, need support, or
+            want to explore how we can work together, we’d love to hear from
+            you.
           </p>
         </div>
-        <div className="flex gap-4 lg:gap-16 flex-col lg:flex-row mt-8 w-full">
+        <div className="grid lg:grid-cols-3 mt-8 w-full">
           {contactLinks.map((contactLink, index) => (
             // Contact link item
             <div key={index} className="flex gap-2 lg:gap-8 items-center">
@@ -61,16 +58,26 @@ export default function ContactUs() {
                 <FaPhone className="text-[#B0610F] text-xl rotate-90" />
               )}
               {contactLink.icon === 'FaMapMarkerAlt' && (
-                <FaMapMarkerAlt className="text-[#B0610F] text-xl" />
+                <FaMapMarkerAlt className="text-[#B0610F] text-3xl" />
               )}
               {contactLink.icon === 'FaEnvelope' && (
                 <FaEnvelope className="text-[#B0610F] text-xl" />
               )}
               <div className="flex flex-col gap-1">
-                <h4 className="text-xs lg:text-sm font-bold">
+                <h4 className="text-xs lg:text-[24px] font-medium">
                   {contactLink.title}
                 </h4>
-                <p>{contactLink.info}</p>
+                <div className="flex flex-col">
+                  {contactLink.info.length > 1 ? (
+                    contactLink.info.map((info, index) => (
+                      <p key={index} className="text-[#747474]">
+                        {info}
+                      </p>
+                    ))
+                  ) : (
+                    <p className="text-[#747474]">{contactLink.info}</p>
+                  )}
+                </div>
               </div>
             </div>
           ))}
