@@ -18,9 +18,9 @@ const DrivingInnovation = () => {
 
       {/* Description Text */}
       <div className="text-center text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] mx-auto text-[#697D95B2] mt-6 max-w-[700px]">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dic.
+        Whether you{"'"}re scaling your business, optimizing operations, or
+        exploring new markets, our technology solutions are designed to make
+        growth seamless.
       </div>
 
       {/* Innovation Sections */}
