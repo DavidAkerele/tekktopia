@@ -7,22 +7,22 @@ const Testimonials = () => {
       id: 1,
       name: 'John Doe',
       role: 'Designer, Hydrogen',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor auctor orci a scelerisque. Donec semper nunc a ligula suscipit congue. Nunc et placerat ante, quis posuere tellus. Integer eleifend efficitur dignissim.',
-      image: '/path-to-image1.jpg',
+      text: 'Tekktopia revolutionized how we manage our tech infrastructure. Their team is not just highly skilled but also incredibly responsive. Our business operations have become smoother and more efficient, and we’re seeing real growth thanks to their innovative solutions.',
+      image: '/testimonial-image.png',
     },
     {
       id: 2,
       name: 'Jane Smith',
       role: 'Designer, Hydrogen',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor auctor orci a scelerisque. Donec semper nunc a ligula suscipit congue. Nunc et placerat ante, quis posuere tellus. Integer eleifend efficitur dignissim.',
-      image: '/path-to-image2.jpg',
+      text: 'Tekktopia revolutionized how we manage our tech infrastructure. Their team is not just highly skilled but also incredibly responsive. Our business operations have become smoother and more efficient, and we’re seeing real growth thanks to their innovative solutions.',
+      image: '/testimonial-image.png',
     },
     {
       id: 3,
       name: 'Alex Johnson',
       role: 'Designer, Hydrogen',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor auctor orci a scelerisque. Donec semper nunc a ligula suscipit congue. Nunc et placerat ante, quis posuere tellus. Integer eleifend efficitur dignissim.',
-      image: '/path-to-image3.jpg',
+      text: 'Tekktopia revolutionized how we manage our tech infrastructure. Their team is not just highly skilled but also incredibly responsive. Our business operations have become smoother and more efficient, and we’re seeing real growth thanks to their innovative solutions.',
+      image: '/testimonial-image.png',
     },
   ];
 
