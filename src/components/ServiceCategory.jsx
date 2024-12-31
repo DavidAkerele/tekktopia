@@ -6,11 +6,12 @@ export default function ServiceCategory({ bgColor, icon, title, description }) {
     grayGradient: 'bg-grayGradient',
     greenGradient: 'bg-greenGradient',
     blueGradient: 'bg-blueGradient',
+    brownGradient: 'bg-brownGradient'
   };
 
   return (
     <div
-      className={`p-5 ${bgClasses[bgColor]} text-white rounded-lg service-category h-full`}
+      className={`p-5 ${bgClasses[bgColor]} text-white rounded-lg service-category h-[272px]`}
     >
       <div className="relative">
         <img className="top-0 left-0 service-icon" src={icon} alt={title} />
