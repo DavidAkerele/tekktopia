@@ -1,9 +1,3 @@
-import dataAnalyticIcon from '../../../../public/dataAnalyticsIcon.png';
-import emergingTechIcon from '../../../../public/emergingTechIcon.png';
-import itSupportIcon from '../../../../public/itSupportIcon.png';
-
-import softwareDevIcon from '../../../../public/softwareDevICon.png';
-
 import ServiceCategory from '../.././ServiceCategory';
 
 export default function ServiceCategories() {
@@ -11,14 +5,14 @@ export default function ServiceCategories() {
     [
       {
         bgColor: 'purpleGradient',
-        icon: softwareDevIcon,
+        icon: '/softwareDevICon.png',
         title: 'Mobile & Web App Development',
         descriptionText:
           'We create smooth, user friendly mobile and web apps that bring your ideas to life.',
       },
       {
         bgColor: 'grayGradient',
-        icon: dataAnalyticIcon,
+        icon: '/dataAnalyticsIcon.png',
         title: 'Data Analytics and Business Intelligence',
         descriptionText:
           'Unlock the power of your data! We turn complex data into clear insights, helping you make smart decisions.',
@@ -34,7 +28,7 @@ export default function ServiceCategories() {
       },
       {
         bgColor: 'brownGradient',
-        icon: itSupportIcon,
+        icon: '/itSupportIcon.png',
         title: 'IT Consulting',
         descriptionText:
           'Our IT consulting services cover everything tech related to your business needs.',
@@ -43,14 +37,14 @@ export default function ServiceCategories() {
     [
       {
         bgColor: 'greenGradient',
-        icon: "/key-square.png",
+        icon: '/key-square.png',
         title: 'Cloud Computing Services',
         descriptionText:
           'Our cloud services give your business flexibility and security, making it easy to adapt to new challenges.',
       },
       {
         bgColor: 'purpleGradient',
-        icon: emergingTechIcon,
+        icon: '/emergingTechIcon.png',
         title: 'Cybersecurity Solutions',
         descriptionText:
           'Protect your business with advanced cybersecurity solutions designed to safeguard your data and networks.',

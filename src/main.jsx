@@ -12,6 +12,7 @@ import Career from './pages/Career';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import { BlogContent } from './pages/BlogContent';
+import ServicePage from './components/services/servicePage';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/blog/:name" element={<BlogContent />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/services/:name" element={<ServicePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
