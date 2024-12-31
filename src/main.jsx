@@ -12,7 +12,7 @@ import Career from './pages/Career';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import { BlogContent } from './pages/BlogContent';
-import ServicePage from './components/services/servicePage';
+import ServicePage from './pages/ServicePage';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
