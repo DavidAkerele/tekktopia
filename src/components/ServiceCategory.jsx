@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types';
 
-export default function ServiceCategory({ bgColor, icon, title, description }) {
+export default function ServiceCategory({
+  bgColor,
+  icon,
+  title,
+  description,
+  link,
+}) {
   const bgClasses = {
     purpleGradient: 'bg-purpleGradient',
     grayGradient: 'bg-grayGradient',
     greenGradient: 'bg-greenGradient',
     blueGradient: 'bg-blueGradient',
-    brownGradient: 'bg-brownGradient'
+    brownGradient: 'bg-brownGradient',
   };
 
   return (
@@ -18,7 +24,7 @@ export default function ServiceCategory({ bgColor, icon, title, description }) {
         <div className="flex flex-col gap-4">
           <h2 className="service-title font-bold text-lg mt-8">{title}</h2>
           <p className="service-description">{description}</p>
-          <a>Read More</a>
+          <a href={link}>Read More</a>
         </div>
       </div>
     </div>
@@ -30,4 +36,5 @@ ServiceCategory.propTypes = {
   icon: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
+  link: PropTypes.string,
 };
