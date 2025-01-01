@@ -20,22 +20,25 @@ function Blog() {
           {[
             {
               image: 'article1.png',
+              id: 1,
               title:
                 'AI content detection in the emerging information ecosystem',
             },
             {
               image: 'article2.png',
+              id: 2,
               title:
                 'How to deal with Big Tech power! The “ Big Tech Rah”, a new form of biopower in the digital age',
             },
             {
               image: 'article3.png',
+              id: 3,
               title:
                 'The urban-texh feedback loop: A surveillance and development data-walk in South Lake Union',
             },
           ].map((article, index) => (
             <Link
-              to={{ pathname: `/blog/${article.title}`, state: 'Water' }}
+              to={{ pathname: `/blog/${article.id}`, state: 'Water' }}
               key={index}
               className="space-y-2"
             >
@@ -57,25 +60,29 @@ function Blog() {
           {[
             {
               image: 'article4.png',
+              id: 4,
               title: 'Equity Structure and Business Innovation Performance',
             },
             {
               image: 'article5.png',
+              id: 5,
               title:
                 'Tech revolution unleashed : Navigating the winds of digital transformation in the fast lane',
             },
             {
               image: 'article6.png',
+              id: 6,
               title: 'The rise and fall of Tech Clusters: A literature revirew',
             },
             {
               image: 'article7.png',
+              id: 7,
               title:
                 'How tech companies advance sustainability through artificial intelligence ',
             },
           ].map((article, index) => (
             <Link
-              to={{ pathname: `/blog/${article.title}`, state: 'Water' }}
+              to={{ pathname: `/blog/${article.id}`, state: 'Water' }}
               key={index}
               className="space-y-2"
             >
