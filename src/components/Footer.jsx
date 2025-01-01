@@ -27,10 +27,10 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#081527] py-[60px] md:py-[100px] lg:py-[171px] text-white box-border">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[143px]">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[120px]">
           {/* Left Section: Logo and Address */}
-          <div className="flex flex-col text-center lg:text-left">
+          <div className="flex flex-col text-center lg:max-w-[264px] lg:text-left">
             <div className="flex items-center justify-center lg:justify-start text-[30px] mb-4">
               <div className="w-[44px] h-[44px]">
                 <img src={tekktopia} alt="Tekktopia Logo" />
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           {/* Right Section: Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center lg:text-left lg:grid-cols-4 lg:gap-12">
             <div>
               <div className="text-[18px] mb-4 text-center lg:text-left">Company</div>
               <div>
