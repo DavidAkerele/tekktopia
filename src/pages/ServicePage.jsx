@@ -204,7 +204,6 @@ const ServiceCategories = {
         'When we partnered with Tekktopia, we knew we needed a tech overhaul, but we didn’t expect the transformation to be this seamless.  They truly understand what businesses need to thrive in today’s market.',
     },
   },
-
 };
 
 const ServicePage = () => {
@@ -235,18 +234,20 @@ const ServicePage = () => {
 
   return (
     <div className="bg-[#081527] text-white w-full items-center flex flex-col justify-center  mx-auto">
-      <Hero
-        imageUrl={image}
-        topText={titleTop}
-        bottomText={titleBottom}
-        subtitle={subtitle}
-      />
+      <div className="container">
+        <Hero
+          imageUrl={image}
+          topText={titleTop}
+          bottomText={titleBottom}
+          subtitle={subtitle}
+        />
 
-      <Features features={features} />
+        <Features features={features} />
 
-      <Testimonials testimonials={testimonials} />
+        <Testimonials testimonials={testimonials} />
 
-      <Reviews reviews={reviews} />
+        <Reviews reviews={reviews} />
+      </div>
     </div>
   );
 };
