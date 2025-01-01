@@ -14,12 +14,18 @@ const Navbar = () => {
     {
       name: 'Services',
       subMenu: [
-        { name: 'Software Development and Engineering', href: '/services' },
-        { name: 'Cloud computing services', href: '/services' },
-        { name: 'Brand Identity & Design', href: '/services' },
-        { name: 'IT Consulting', href: '/services' },
-        { name: 'Data Analytics & Business Intelligence', href: '/services' },
-        { name: 'Cybersecurity Solutions', href: '/services' },
+        { name: 'Mobile & Web Development', href: '/services/mobile-web-dev' },
+        {
+          name: 'Product Design and Envisioning',
+          href: '/services/product-design',
+        },
+        { name: 'Cloud Computing Services', href: '/services/cloud-computing' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        {
+          name: 'Data Analytics & Business Intelligence',
+          href: '/services/data-analytics',
+        },
+        { name: 'Cybersecurity Solutions', href: '/services/cyber-security' },
       ],
     },
     { name: 'Blog', href: '/blog' },
@@ -42,7 +48,10 @@ const Navbar = () => {
   };
 
   const handleMobileToggle = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  const toggleSubMenu = (name) => setOpenSubMenu(openSubMenu === name ? null : name);
+
+  const toggleSubMenu = (name) => {
+    setOpenSubMenu(openSubMenu === name ? null : name);
+  };
 
   useEffect(() => {
     return () => {
@@ -53,7 +62,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FCFDFF] border-b fixed top-0 p-4 w-full z-20 flex flex-col box-border lg:flex-row justify-center">
       <div className="px-2 sm:px-6 lg:px-8 flex items-center justify-between w-full h-16 lg:container mx-auto">
-        {/* Left section: Logo */}
+        {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center ml-0">
           <a href="/" className="flex items-center">
             <img src="/logo.png" alt="tekktopia" className="w-8 h-8" />
@@ -64,50 +73,59 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Right section: Menu and Button */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-5">
-          {navItems.map((item) => {
-            const isActive = window.location.pathname === item.href;
-            return (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => item.subMenu && handleMouseEnter(item.name)}
-                onMouseLeave={handleMouseLeave}
+          {navItems.map((item) => (
+            <div
+              key={item.name}
+              className="relative"
+              onMouseEnter={() => item.subMenu && handleMouseEnter(item.name)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a
+                href={item.subMenu ? '/services' : item.href}
+                onClick={(e) => {
+                  if (
+                    item.name === 'Services' &&
+                    openDropdown === item.name &&
+                    isHovering
+                  ) {
+                    e.stopPropagation(); // Stop event bubbling
+                  } else {
+                    window.location.href = '/services'; // Allow navigation
+                  }
+                }}
+                className={`${
+                  item.isButton
+                    ? 'bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2 box-border'
+                    : `${window.location.pathname === item.href ? 'text-[#F5901F]' : 'text-black'} 
+hover:text-blue-500 lg:px-3 py-2 box-border`
+                } rounded-md text-xs sm:text-sm font-medium flex items-center`}
               >
-                <a
-                  href={item.href}
-                  className={`${
-                    item.isButton
-                      ? 'bg-[#070223] hover:bg-blue-500 text-[#6797D5] hover:text-white px-4 py-2 box-border'
-                      : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:text-blue-500 lg:px-3 py-2 box-border`
-                  } rounded-md text-xs sm:text-sm font-medium flex items-center`}
-                >
-                  {item.name}
-                  {item.isButton && <FiChevronRight className="ml-2" />}
-                  {item.subMenu && <FiChevronDown className="ml-2" />}
-                </a>
+                {item.name}
+                {item.isButton && <FiChevronRight className="ml-2" />}
+                {item.subMenu && <FiChevronDown className="ml-2" />}
+              </a>
 
-                {/* Desktop Dropdown menu */}
-                {item.subMenu && openDropdown === item.name && isHovering && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-20">
-                    {item.subMenu.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-200"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+              {/* Dropdown Menu */}
+              {item.subMenu && openDropdown === item.name && isHovering && (
+                <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-20">
+                  {item.subMenu.map((subItem) => (
+                    <a
+                      key={subItem.name}
+                      href={subItem.href}
+                      className="block px-4 py-2 text-sm text-black hover:bg-gray-200"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile Menu Toggle */}
         <div className="lg:hidden">
           <button
             onClick={handleMobileToggle}
@@ -148,44 +166,41 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden px-2 pt-2 pb-3 space-y-1">
-          {navItems.map((item) => {
-            const isActive = window.location.pathname === item.href;
-            return (
-              <div key={item.name} className="relative">
-                <a
-                  href={item.href}
-                  className={`${
-                    item.isButton
-                      ? 'bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2'
-                      : `${isActive ? 'text-[#F5901F]' : 'text-black'} hover:bg-gray-700 hover:text-white px-3 py-2`
-                  }  rounded-md text-base font-medium flex items-center`}
-                  onClick={() => item.subMenu && toggleSubMenu(item.name)}
-                >
-                  {item.name}
-                  {item.isButton && <FiChevronRight className="ml-2" />}
-                  {item.subMenu && <FiChevronDown className="ml-2" />}
-                </a>
+          {navItems.map((item) => (
+            <div key={item.name} className="relative">
+              <a
+                href={item.href}
+                className={`${
+                  item.isButton
+                    ? 'bg-[#070223] hover:bg-blue-500 text-center text-[#6797D5] hover:text-white px-4 py-2'
+                    : `${window.location.pathname === item.href ? 'text-[#F5901F]' : 'text-black'} hover:bg-gray-700 hover:text-white px-3 py-2`
+                } rounded-md text-base font-medium flex items-center`}
+                onClick={() => item.subMenu && toggleSubMenu(item.name)}
+              >
+                {item.name}
+                {item.isButton && <FiChevronRight className="ml-2" />}
+                {item.subMenu && <FiChevronDown className="ml-2" />}
+              </a>
 
-                {/* Mobile dropdown */}
-                {item.subMenu && openSubMenu === item.name && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {item.subMenu.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block pl-7 pr-4 py-2 text-base text-black hover:bg-gray-200"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+              {/* Mobile Dropdown Menu */}
+              {item.subMenu && openSubMenu === item.name && (
+                <div className="ml-4 mt-2 space-y-1">
+                  {item.subMenu.map((subItem) => (
+                    <a
+                      key={subItem.name}
+                      href={subItem.href}
+                      className="block pl-7 pr-4 py-2 text-base text-black hover:bg-gray-200"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       )}
     </nav>
