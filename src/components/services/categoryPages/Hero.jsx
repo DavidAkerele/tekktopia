@@ -16,7 +16,7 @@ const Hero = ({ imageUrl, topText, bottomText, subtitle }) => {
         </h1>
         <p>{subtitle}</p>
       </div>
-      <section className="lg:-mt-72 z-30 -mt-48 bg-gradient-to-b from-transparent via-[#081527] to-[#081527] flex flex-col w-full px-4 lg:px-[80px]">
+      <section className="lg:-mt-72 -mt-48 bg-gradient-to-b from-transparent via-[#081527] to-[#081527] flex flex-col w-full px-4 lg:px-[80px]">
         <button className="flex gap-2 h-[40px] text-[16px] w-[240px] sm:ml-[72px] lg:ml-0 bg-white text-black px-4 py-2 lg:mt-16 rounded-[8px]">
           Discover our solutions
           <img src="/arrow-right.png" />
