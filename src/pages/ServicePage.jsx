@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Hero from '../components/services/categoryPages/Hero';
 import Features from '../components/services/categoryPages/Features';
 import Testimonials from '../components/services/categoryPages/Testimonials';
-import { FiChevronRight } from 'react-icons/fi';
+import Reviews from '../components/services/categoryPages/Reviews';
 
 // Define service categories
 const ServiceCategories = {
@@ -31,6 +31,39 @@ const ServiceCategories = {
       },
     ],
     testimonials: '/cloud-computing-att.png',
+    image: '/cloud-computing.png',
+    reviews: {
+      image: '/review-guy.png',
+      name: 'John Doe',
+      comment:
+        'Tekktopia didn’t just provide us with solutions, they empowered our team to harness the full potential of technology. We’re truly grateful for their expertise and dedication.',
+    },
+  },
+  'mobile-web-dev': {
+    titleTop: 'Mobile &',
+    titleBottom: 'Web Development',
+    subtitle: 'Seamless Mobile & Web Platforms Tailored to Your Needs',
+    features: [
+      {
+        title: 'Custom Application Development',
+        description:
+          'Build applications tailored to your business goals and user needs. Feature-rich, interactive designs optimized for superior user experience (UX).',
+        image: '/cloud-f1.png',
+      },
+      {
+        title: 'Cross Platform Development',
+        description:
+          'Develop apps that work seamlessly across multiple platforms (iOS, Android, and web). Ensure consistent branding and performance across devices.',
+        image: '/coding-guy.png',
+      },
+      {
+        title: 'User-Centered Design (UI/UX)',
+        description:
+          'Prioritize user experience with intuitive interfaces and seamless navigation. Conduct user research, prototyping, and testing to ensure designs meet user expectations.',
+        image: '/coding-guy2.png',
+      },
+    ],
+    testimonials: '/mobile-web-att.png',
     image: '/cloud-computing.png',
     reviews: {
       image: '/review-guy.png',
@@ -80,22 +113,7 @@ const ServicePage = () => {
 
       <Testimonials testimonials={testimonials} />
 
-      <section className="bg-white text-black px-6 lg:px-[80px] w-full gap-12 flex flex-col items-center justify-center pt-16 pb-10">
-        <h1 className="text-[32px]">What Our Customers Say</h1>
-        <div className="grid sm:grid-cols-2 mt-10 w-full">
-          <img src={reviews.image} alt="Review Guy" className="max-w-[552px] w-full" />
-          <div className="p-8 bg-gradient-to-r from-[#F4DBBF] to-[#EEDAC4] justify-between flex flex-col">
-            <h2 className="text-[14px]">{reviews.name}</h2>
-            <p className="sm:text-[20px]">{reviews.comment}</p>
-            <a
-              href="/contact-us"
-              className={`bg-[#070223] lg:mt-auto mt-8 text-[#6797D5] hover:text-white max-w-[170px] px-4 py-2 box-border rounded-md text-xs sm:text-sm font-medium flex items-center`}
-            >
-              Connect With Us <FiChevronRight className="ml-2" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <Reviews reviews={reviews} />
     </div>
   );
 };
