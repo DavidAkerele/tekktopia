@@ -13,10 +13,10 @@ export default function Features({ features }) {
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full"
+                  className="w-full h-[285px]"
                 />
                 <div
-                  className={`${index === 1 ? 'bg-[#C3C1DA]' : `${index == 2 ? 'bg-[#EEDAC4]' : 'bg-[#fff]'}`} p-6 py-8 m-h-[250px] font-medium shadow-md text-black`}
+                  className={`${index === 1 ? 'bg-[#C3C1DA]' : `${index == 2 ? 'bg-[#EEDAC4]' : 'bg-[#fff]'}`} p-6 py-8 min-h-[250px] font-medium shadow-md text-black`}
                 >
                   <h3 className="text-[16px] mb-2">{feature.title}</h3>
                   <p className="text-[14px] text-[#13131397]">
