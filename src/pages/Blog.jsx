@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import { MdArrowForward } from 'react-icons/md';
 // import blogHeroImage from "/blog-hero.png";
 // import SignupTrigger from '../components/SignupTrigger';
 
@@ -68,15 +69,15 @@ function Blog() {
             <Link
               to={{ pathname: `/blog/${article.id}`, state: 'Water' }}
               key={index}
-              className="space-y-2"
+              className=" flex flex-col gap-2 "
             >
               <img
                 src={`/${article.image}`}
                 alt="blog"
                 className="w-full h-auto object-cover"
               />
-              <p className="w-full">{article.title}</p>
-              <span className="cursor-pointer mt-4">Read more -&gt;</span>
+              <p className="w-full leading-6 text-[18px]">{article.title}</p>
+              <span className="cursor-pointer mt-auto text-[16px] leading-6 flex gap-2 items-center">Read More <MdArrowForward className='w-[18px]'/> </span>
             </Link>
           ))}
         </section>
