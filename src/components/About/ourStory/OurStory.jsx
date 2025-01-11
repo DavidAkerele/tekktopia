@@ -51,7 +51,7 @@ const OurStory = () => {
             <h2 className="text-[24px] sm:text-[32px] mb-4">
               How We Started Till Date
             </h2>
-            <p className="text-[#697D95B2] text-[14px] sm:text-[16px] w-full sm:w-[600px]">
+            <p className="text-[#697D95B2] text-[14px] w-full sm:w-[600px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in
               ligula aliquam, faucibus erat a, dictum erat. Aliquam rutrum eget
               odio et mattis. Sed laoreet porta condimentum. Phasellus
@@ -86,8 +86,8 @@ const OurStory = () => {
                       <h1 className="text-[24px] sm:text-[32px] text-white font-extrabold">
                         {year.year}
                       </h1>
-                      <div className="text-white text-[14px] sm:text-[16px]">
-                        <p>{year.title}</p>
+                      <div className="text-white text-[14px] ">
+                        <p className='text-[16px] font-medium'>{year.title}</p>
                         {year.description}
                       </div>
                     </div>
@@ -104,7 +104,7 @@ const OurStory = () => {
           <img
             src={About2}
             alt="About Image"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full rounded-[16px]"
           />
         </div>
         <div className="max-w-[620px] flex flex-col justify-center px-[40px] box-border">

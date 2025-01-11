@@ -27,7 +27,7 @@ const GetStarted = () => {
   return (
     <section className="mt-[200px] px-4 sm:px-8">
       <div className="flex flex-col lg:flex-row text-center justify-between items-center">
-        <div className="text-[32px] max-w-[518px] text-center lg:text-left">
+        <div className="text-[32px] max-w-[518px] leading-[45px] text-center lg:text-left">
           Bridging excellence and innovation across diverse sectors.
         </div>
         <div className="max-w-[484px] text-[14px] text-[#697D95B2] text-center sm:text-left mt-4 sm:mt-0">

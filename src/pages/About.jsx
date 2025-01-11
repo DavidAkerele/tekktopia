@@ -5,7 +5,7 @@ import CompanyEthos from '../components/About/companyEthos/CompanyEthos';
 
 const About = () => {
   return (
-    <section className="mt-24 flex flex-col items-center  w-full">
+    <section className="flex flex-col items-center  w-full">
       {/* First about section */}
       <div className="relative items-center flex flex-col justify-center">
         {/* Background Image */}
@@ -23,26 +23,24 @@ const About = () => {
             className="w-[120px] sm:w-[150px] lg:w-[180px] object-contain"
           />
           <p className="mt-4 text-sm sm:text-base text-white">ABOUT US</p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-center text-white mt-3">
+          <div className="text-3xl lg:text-[60px] font-medium leading-[70px] text-center text-white mt-3">
             Crafting <br />
             Customized Wealth Solutions
-          </h1>
+          </div>
         </div>
       </div>
-
-      {/* Second about section */}
-      <OurStory />
-
+      <div className="container mx-auto w-full">
+        {/* Second about section */}
+        <OurStory />
+      </div>
       {/* Fourth about section */}
       <AboutBanner />
 
-      {/* Fifth about section */}
-      <GetStarted />
+      <div className="container mx-auto w-full">
+        {/* Fifth about section */}
+        <GetStarted />
 
-      {/* Sixth about section */}
-      <div className='container mt-5'>
-
-      <CompanyEthos />
+        <CompanyEthos />
       </div>
     </section>
   );
