@@ -7,44 +7,52 @@ export default function TeamMembers() {
   const teamMembers = [
     {
       name: 'AKINOLA DANIEL OSHINUBI',
-      imageUrl: "/daniel-oshinubi.png",
+      imageUrl: '/daniel-oshinubi.png',
       role: 'Founder & MD/CEO',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
       name: 'BOLUWATIFE ONI',
-      imageUrl: "/tife-oni.png",
+      imageUrl: '/tife-oni.png',
       role: 'Head, Sales & Business Devel...',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
       name: 'OLUWADAMILARE ADEKOYA',
-      imageUrl: "/dami-adekoya.png",
+      imageUrl: '/dami-adekoya.png',
       role: 'Product Manager',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
-    {
-      name: 'OREOLUWA LEO-DADA',
-      imageUrl: "/ore-dada.png",
-      role: 'Digital Marketing Executive',
-      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
-    },
+
     {
       name: 'AKERELE DAVID',
       imageUrl: teamMember,
       role: 'Head. Software Development',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
-    {
-      name: 'SAMUEL OLAWUMI',
-      imageUrl: "/samuel-olawumi.jpg",
-      role: 'Frontend Developer',
-      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
-    },
+
     {
       name: 'IREOLUWA ADEOLUWA',
       imageUrl: teamMember,
       role: 'CTO',
+      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
+    },
+    {
+      name: 'SAMUEL OLAWUMI',
+      imageUrl: '/samuel-olawumi.jpg',
+      role: 'Software Engineer',
+      linkedIn: 'https://www.linkedin.com/in/WumiCodes',
+    },
+    {
+      name: 'JOLAOLUWA OLUSANYA',
+      imageUrl: '/samuel-olawumi.jpg',
+      role: 'Software Engineer',
+      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
+    },
+    {
+      name: 'OREOLUWA LEO-DADA',
+      imageUrl: '/ore-dada.png',
+      role: 'Digital Marketing Executive',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
   ];

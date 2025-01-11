@@ -44,7 +44,7 @@ export default function OurTeam() {
           </div>
 
           {/* Right Side: Text */}
-          <div className="flex flex-col lg:absolute lg:right-0 w-full lg:w-[600px] lg:top-20">
+          <div className="flex flex-col lg:absolute lg:right-12 w-full lg:w-[600px] lg:top-20">
             <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
               Our Team Members
             </h2>

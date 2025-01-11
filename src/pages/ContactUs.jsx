@@ -14,16 +14,21 @@ export default function ContactUs() {
       icon: 'FaPhone',
       title: 'Call Us at',
       info: ['+234 815 433 2992', '+234 810 596 3769', '+234 909 330 9638'],
+      href: 'tel:',
     },
     {
       icon: 'FaMapMarkerAlt',
       title: 'Location',
-      info: ['43, Baale Street, Idado Estate, Igbo-Efon, Off Lekki - Epe Expressway, Lagos State, Nigeria.'],
+      info: [
+        '43, Baale Street, Idado Estate, Igbo-Efon, Off Lekki - Epe Expressway, Lagos State, Nigeria.',
+      ],
+      href: 'google.com',
     },
     {
       icon: 'FaEnvelope',
       title: 'Send us a mail',
       info: ['info@tekktopia.com'],
+      href: 'mailto:',
     },
   ];
 
@@ -70,12 +75,16 @@ export default function ContactUs() {
                 <div className="flex flex-col">
                   {contactLink.info.length > 1 ? (
                     contactLink.info.map((info, index) => (
-                      <p key={index} className="text-[#747474]">
-                        {info}
-                      </p>
+                      <a key={index} href={contactLink.href + contactLink.info[index]}>
+                        <p  className="text-[#747474]">
+                          {info}
+                        </p>
+                      </a>
                     ))
                   ) : (
-                    <p className="text-[#747474]">{contactLink.info}</p>
+                    <a href={contactLink.href + contactLink.info}>
+                      <p className="text-[#747474]">{contactLink.info}</p>
+                    </a>
                   )}
                 </div>
               </div>
