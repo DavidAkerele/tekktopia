@@ -14,7 +14,7 @@ export default function Services() {
       />
 
       {/* Our Services Section */}
-      <div className=" container ">
+      <div className=" container mx-auto">
         <OurServices />
       </div>
 

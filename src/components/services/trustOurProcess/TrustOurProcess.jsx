@@ -48,7 +48,7 @@ const TrustOurProcess = () => {
   return (
     <section className="w-full bg-[url('/qualityAssuranceBg.png')] p-12 mt-[100px] rounded-md">
       <div className="mx-auto  gap-5 flex flex-col lg:flex-row text-white items-center">
-        <div className="lg:w-[60%] mr-auto flex flex-col">
+        <div className="lg:w-[542px] mr-auto flex flex-col">
           <h2 className="text-2xl sm:text-3xl mb-2 font-medium">
             Trust Us Process
             <img
