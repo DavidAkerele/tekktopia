@@ -1,5 +1,5 @@
 import { FiChevronRight } from 'react-icons/fi';
-import { GrStatusGood } from 'react-icons/gr';
+import { MdCheckCircle } from 'react-icons/md';
 
 import home3 from '../../../assets/images/home3.svg';
 
@@ -9,11 +9,11 @@ const DiverseSectors = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
         {/* Image Container */}
         <div className="w-full max-w-[600px] h-auto flex justify-center items-center bg-gradient-to-br from-[#041429] from-[60%] to-[#244674] to-[100%] rounded-[12px]">
-          <div className="p-4 box-border border-[1px] border-[#1e2c3e] rounded-md">
+          <div className="p-16 w-[600px] box-border border-[1px] border-[#1e2c3e] rounded-[12px]">
             <img
               src={home3}
               alt=""
-              className="w-full h-auto max-w-[472px] max-h-[522px] object-cover"
+              className="w-full h-auto max-h-[522px] object-cover"
             />
           </div>
         </div>
@@ -23,7 +23,7 @@ const DiverseSectors = () => {
           <h3 className="text-[28px] lg:text-[32px] text-[#0B0B0B] leading-[40px] lg:leading-[45px]">
             Your Vision, Our Expertise
           </h3>
-          <p className="mt-2 text-[14px] lg:text-[16px] text-[#697D95B2] font-[400] leading-[22px] lg:leading-[24px]">
+          <p className="mt-2 text-[14px] text-[#697D95B2] font-[400] leading-[22px] lg:leading-[24px]">
             At Tekktopia, we don’t just deliver services; we build partnerships.
             Our team of experts is dedicated to understanding your unique goals
             and crafting solutions that align with your vision. Whether it{"'"}s
@@ -42,7 +42,7 @@ const DiverseSectors = () => {
             ].map((_, index) => (
               <div key={index}>
                 <p className="pb-4 flex text-[16px] font-[400] items-center gap-4">
-                  <GrStatusGood className="text-[#A66928]" /> {_}
+                  <MdCheckCircle className="text-[#A66928] text-[24px]" /> {_}
                 </p>
               </div>
             ))}
