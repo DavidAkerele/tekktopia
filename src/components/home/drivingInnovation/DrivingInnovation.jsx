@@ -17,7 +17,7 @@ const DrivingInnovation = () => {
       </div>
 
       {/* Description Text */}
-      <div className="text-center text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] mx-auto text-[#697D95B2] mt-6 max-w-[700px]">
+      <div className="text-center text-[14px] leading-[24px] mx-auto text-[#697D95B2] mt-6 max-w-[700px]">
         Whether you{"'"}re scaling your business, optimizing operations, or
         exploring new markets, our technology solutions are designed to make
         growth seamless.

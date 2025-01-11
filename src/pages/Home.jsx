@@ -3,7 +3,7 @@ import BridgingExcellence from '../components/home/bridgingExcellence/BridgingEx
 import DiverseSectors from '../components/home/diverseSectors/DiverseSectors';
 import DrivingInnovation from '../components/home/drivingInnovation/DrivingInnovation';
 import HomeBanner from '../components/home/banner/HomeBanner';
-import Testimonials from '../components/home/Testimonials/Testimonials';
+// import Testimonials from '../components/home/Testimonials/Testimonials';
 import LatestArticles from '../components/home/LatestArticles/LatestArticles';
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
       <HomeBanner />
 
       {/*Sixth Home section*/}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/*Seventh Home section*/}
       <LatestArticles />

@@ -11,7 +11,7 @@ const BridgingExcellence = () => {
             Bridging excellence and <br />
             innovation across diverse sectors.
           </div>
-          <div className="text-[#FFFFFFB2] text-center text-[14px] sm:text-[16px] leading-[24px]">
+          <div className="text-[#FFFFFFB2] text-center text-[14px] leading-[24px]">
             Empowering businesses to thrive with tailored solutions and
             innovative technology. Our expertise spans multiple <br />
             industries, ensuring that no matter your needs, we have the tools

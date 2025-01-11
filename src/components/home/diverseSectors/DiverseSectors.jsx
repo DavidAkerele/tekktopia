@@ -9,7 +9,7 @@ const DiverseSectors = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
         {/* Image Container */}
         <div className="w-full max-w-[600px] h-auto flex justify-center items-center bg-gradient-to-br from-[#041429] from-[60%] to-[#244674] to-[100%] rounded-[12px]">
-          <div className="p-16 w-[600px] box-border border-[1px] border-[#1e2c3e] rounded-[12px]">
+          <div className="lg:p-16 p-8 lg:w-[600px] box-border border-[1px] border-[#1e2c3e] rounded-[12px]">
             <img
               src={home3}
               alt=""
