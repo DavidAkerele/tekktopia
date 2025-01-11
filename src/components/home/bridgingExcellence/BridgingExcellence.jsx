@@ -27,8 +27,8 @@ const BridgingExcellence = () => {
               alt=""
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-0 w-full h-full bg-gradient-to-r from-[#231506]/90 via-[#372511]/90 to-[#554c3b]/0 text-white py-[80px] px-[40px]">
-              <div className="max-w-[300px]">
+            <div className="absolute top-0 flex items-center w-full h-full bg-gradient-to-r from-[#231506]/90 via-[#372511]/90 to-[#554c3b]/0 text-white py-[80px] px-[40px]">
+              <div className="max-w-[300px] my-auto">
                 <p className="text-[20px] font-medium">Businesses trying to grow</p>
                 <p className="mt-[8px] text-[14px]">
                   Running a business is challenging enough without worrying
@@ -46,8 +46,8 @@ const BridgingExcellence = () => {
               alt=""
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-0 w-full h-full bg-gradient-to-r from-[#231506]/90 via-[#372511]/90 to-[#554c3b]/0 text-white py-[80px] px-[40px]">
-              <div className="max-w-[300px]">
+            <div className="absolute top-0 w-full flex items-center h-full bg-gradient-to-r from-[#231506]/90 via-[#372511]/90 to-[#554c3b]/0 text-white py-[80px] px-[40px]">
+              <div className="max-w-[300px] my-auto">
                 <p className="text-[20px] font-medium">
                   Innovative Solutions That <br/> Work for You
                 </p>
@@ -62,7 +62,7 @@ const BridgingExcellence = () => {
         </div>
 
         {/* Text Content Section */}
-        <div className="flex flex-col lg:flex-row gap-16 mt-16 w-full justify-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 mt-16 w-full justify-center">
           <div className="max-w-[600px] w-full">
             <div className="text-[32px] text-[#FFFFFF] font-[400]">
               Why should you choose Tekktopia?
@@ -70,7 +70,7 @@ const BridgingExcellence = () => {
             <p className="w-full text-[#FFFFFFB2] leading-[24px] text-[14px] lg:text-[16px]"></p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-[90px] mb-24 w-full justify-center">
+          <div className="grid lg:grid-cols-2 gap-[30px] mb-24 w-full lg:justify-center">
             {[
               {
                 title: 'Scalability',
@@ -95,8 +95,8 @@ const BridgingExcellence = () => {
                   'Access help anytime with our round the clock service.',
               },
             ].map((_, index) => (
-              <div key={index} className="flex-grow max-w-[400px]">
-                <div className="text-[24px] mb-2 font-bold text-[#C2813B]">
+              <div key={index} className="flex-grow h-full max-w0px]">
+                <div className="text-[20px] sm:text-[24px] lg:text-[32px] leading-[46px] mb-2 font-bold text-[#C2813B]">
                   {_.title}
                 </div>
                 <p className="text-[14px] border-b-[0.05px] border-[#CCCCCC] py-8 text-[#FFFFFF]">

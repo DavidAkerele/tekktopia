@@ -6,7 +6,7 @@ const HomeHero = () => {
   return (
     <div className=" px-4 sm:px-6 lg:px-8 flex flex-col items-center">
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 text-center md:text-left">
-        <h1 className="text-[24px] sm:text-[28px] md:text-[60px] font-medium text-[#0B0B0B] leading-tight">
+        <h1 className="text-[24px] sm:text-[28px] md:text-[60px] font-medium text-[#0B0B0B] leading-[80px]">
           Simplifying Technology,
         </h1>
         <div className="flex mt-4 md:mt-0 relative">
@@ -24,7 +24,7 @@ const HomeHero = () => {
         </div>
       </div>
 
-      <h2 className="text-[24px] sm:text-[28px] md:text-[60px] bg-gradient-to-r from-[#67BDD5] to-[#4B82CA] text-transparent font-medium bg-clip-text mt-4 text-center leading-tight">
+      <h2 className="text-[24px] sm:text-[28px] md:text-[60px] bg-gradient-to-r from-[#67BDD5] to-[#4B82CA] text-transparent font-medium bg-clip-text mt-4 text-center leading-[80px]">
         Empowering Your Business
       </h2>
 
@@ -57,7 +57,7 @@ const HomeHero = () => {
           </div>
           <div className="flex items-center justify-between mt-[8px] p-[12px] border border-[#CCCCCC4D] rounded-sm">
             <img
-              src="/public/tekktopia-logo.png"
+              src="/tekktopia-logo.png"
               alt="hero section"
               className="w-[50px] h-[53px]"
             />
