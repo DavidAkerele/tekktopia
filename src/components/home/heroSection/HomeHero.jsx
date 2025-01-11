@@ -35,9 +35,11 @@ const HomeHero = ({ setIsModalOpen }) => {
       </p>
 
       <div className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-center">
-        <button className="bg-[#070223] text-[#6797D5] hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md flex items-center">
-          Contact us <FiChevronRight />
-        </button>
+        <a href='/contact-us'>
+          <button className="bg-[#070223] text-[#6797D5] hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md flex items-center">
+            Contact us <FiChevronRight />
+          </button>
+        </a>
         <button
           className="bg-white text-[#070223] hover:bg-[#6797D5] hover:text-white px-4 py-2 rounded-md flex items-center border  shadow-sm"
           onClick={() => setIsModalOpen(true)}
