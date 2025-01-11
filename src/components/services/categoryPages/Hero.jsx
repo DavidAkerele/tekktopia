@@ -17,11 +17,11 @@ const Hero = ({ imageUrl, topText, bottomText, subtitle }) => {
         <p>{subtitle}</p>
       </div>
       <section className="lg:-mt-72 -mt-48 bg-gradient-to-b from-transparent via-[#081527] to-[#081527] flex flex-col w-full px-4 lg:px-[80px]">
-        <button className="flex gap-2 h-[40px] text-[16px] w-[240px] sm:ml-[72px] lg:ml-0 bg-white text-black px-4 py-2 lg:mt-16 rounded-[8px]">
+        <button className="flex gap-2 h-[40px] text-[16px] w-[240px] sm:ml-[72px] lg:ml-0 bg-white text-black px-4 py-2 lg:mt-[8rem] rounded-[8px]">
           Discover our solutions
           <img src="/arrow-right.png" />
         </button>
-        <p className="sm:mt-64 mt-48 text-center sm:text-[18px] text-[14px] font-light sm:px-16">
+        <p className="sm:mt-64 mt-48 text-center sm:text-[20px] text-[14px] font-light sm:px-16">
           At Tekktopia, we deliver comprehensive cloud computing solutions
           designed to empower businesses with agility, scalability, and
           innovation. Our expertise spans across public, private, hybrid, and

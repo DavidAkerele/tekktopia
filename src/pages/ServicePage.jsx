@@ -234,20 +234,19 @@ const ServicePage = () => {
 
   return (
     <div className="bg-[#081527] text-white w-full items-center flex flex-col justify-center  mx-auto">
-      <div className="container">
-        <Hero
-          imageUrl={image}
-          topText={titleTop}
-          bottomText={titleBottom}
-          subtitle={subtitle}
-        />
-
+      <Hero
+        imageUrl={image}
+        topText={titleTop}
+        bottomText={titleBottom}
+        subtitle={subtitle}
+      />
+      <div className="container mx-auto">
         <Features features={features} />
 
         <Testimonials testimonials={testimonials} />
-
+</div>
         <Reviews reviews={reviews} />
-      </div>
+      
     </div>
   );
 };

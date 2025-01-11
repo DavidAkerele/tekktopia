@@ -4,7 +4,7 @@ export default function Features({ features }) {
     <div>
       {features && features.length > 0 && (
         <section className="lg:my-12 px-6 mt-32 lg:px-[80px]">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
