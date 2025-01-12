@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Hero = ({ imageUrl, topText, bottomText, subtitle }) => {
   return (
-    <div className="relative w-full h-[850px]  flex flex-col justify-center items-center text-white">
+    <div className="relative w-full h-[850px]  flex flex-col justify-center items-center text-white -mt-8 md:mt-10 lg:mt-24">
       <img
         src={imageUrl}
         alt="hero"
