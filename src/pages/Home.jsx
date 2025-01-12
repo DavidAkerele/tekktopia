@@ -20,7 +20,7 @@ const Home = () => {
       <BridgingExcellence />
 
       {/* Third Home Section */}
-      <DiverseSectors />
+      <DiverseSectors setIsModalOpen={setIsModalOpen}/>
 
       {/* Fourth Home Section */}
       <DrivingInnovation />

@@ -1,9 +1,10 @@
 import { FiChevronRight } from 'react-icons/fi';
 import { MdCheckCircle } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 import home3 from '../../../assets/images/home3.svg';
 
-const DiverseSectors = () => {
+const DiverseSectors = ({ setIsModalOpen }) => {
   return (
     <section className="mt-40 px-4 lg:px-16">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
@@ -30,7 +31,10 @@ const DiverseSectors = () => {
             scaling your business, managing operations, or driving innovation,
             you can count on us to be with you every step of the way.
           </p>
-          <button className="text-base mt-4 font-medium flex items-center rounded-md px-4 py-2 border shadow-sm">
+          <button
+            className="text-base mt-4 font-medium flex items-center rounded-md px-4 py-2 border shadow-sm"
+            onClick={() => setIsModalOpen(true)}
+          >
             Request a demo <FiChevronRight />
           </button>
           <div className="mt-14">
@@ -54,3 +58,7 @@ const DiverseSectors = () => {
 };
 
 export default DiverseSectors;
+
+DiverseSectors.propTypes = {
+  setIsModalOpen: PropTypes.func.isRequired,
+};

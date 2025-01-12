@@ -47,6 +47,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               placeholder="Your Name"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="full_name"
+              required
             />
           </div>
           <div>
@@ -58,6 +59,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               placeholder="Your Email"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="user_email"
+              required
             />
           </div>
           <div>
@@ -67,6 +69,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             <select
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="service_needed"
+              required
             >
               <option>Select a service</option>
               {[
@@ -89,6 +92,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               type="date"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="date"
+              required
             />
           </div>
           <div>
@@ -99,6 +103,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               type="time"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="time"
+              required
             />
           </div>
           <div>
@@ -109,6 +114,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               placeholder="Your Note"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
               name="message"
+              required
             ></textarea>
           </div>
           <button
