@@ -21,10 +21,12 @@ const HomeBanner = () => {
             with practical results, helping our clients succeed in a constantly
             evolving world”.
           </p>
-          <button className="text-base sm:text-[14px] mt-10 bg-[#FFFFFF] text-[#6797D5] font-medium flex items-center rounded-md px-[20px] py-2 border shadow-sm">
-            Contact us
-            <FiChevronRight />
-          </button>
+          <a href="/contact-us">
+            <button className="text-base sm:text-[14px] mt-10 bg-[#FFFFFF] text-[#6797D5] font-medium flex items-center rounded-md px-[20px] py-2 border shadow-sm">
+              Contact us
+              <FiChevronRight />
+            </button>
+          </a>
         </div>
       </div>
     </section>
