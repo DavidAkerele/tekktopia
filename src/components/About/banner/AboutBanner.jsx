@@ -15,7 +15,7 @@ const AboutBanner = () => {
 
       {/* Content Section */}
       <div className="relative z-10 text-white w-full flex flex-col items-center justify-center text-center px-4">
-        <div className="text-[32px] font-medium">
+        <div className="text-[24px] lg:text-[32px] font-medium">
           Empowering your vision with innovative solutions, because your success
           is our mission
         </div>

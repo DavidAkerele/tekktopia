@@ -5,14 +5,14 @@ import CompanyEthos from '../components/About/companyEthos/CompanyEthos';
 
 const About = () => {
   return (
-    <section className="flex flex-col items-center  w-full">
+    <section className="w-full flex-col flex items-center justify-center mt-16 md:mt-44">
       {/* First about section */}
-      <div className="relative items-center flex flex-col justify-center">
+      <div className="relative w-full">
         {/* Background Image */}
         <img
           src="/about-banner.png"
           alt="About Banner"
-          className="w-full h-[300px] sm:h-[450px] md:h-[650px] object-cover"
+          className="w-full h-[450px] sm:h-[650px] object-cover"
         />
 
         {/* Overlay Div */}
@@ -23,7 +23,7 @@ const About = () => {
             className="w-[120px] sm:w-[150px] lg:w-[180px] object-contain"
           />
           <p className="mt-4 text-sm sm:text-base text-white">ABOUT US</p>
-          <div className="text-3xl lg:text-[60px] font-medium leading-[70px] text-center text-white mt-3">
+          <div className="text-3xl lg:text-[60px] font-medium lg:leading-[70px] text-center text-white mt-3">
             Crafting <br />
             Customized Wealth Solutions
           </div>
