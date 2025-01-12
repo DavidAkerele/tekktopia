@@ -1,7 +1,30 @@
 import PropTypes from 'prop-types';
-const RequestDemoModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 
+const RequestDemoModal = ({ isOpen, onClose }) => {
+  const form = useRef();
+  const [emailSent, setEmailSent] = useState('');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_mrk3ohv', 'template_n3bfm7c', form.current, {
+        publicKey: 'FRzkYgrpiHA_BogGH',
+      })
+      .then(
+        () => {
+          setEmailSent('Email sent successfully!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setEmailSent('Failed to send email!');
+        }
+      );
+  };
+
+  if (!isOpen) return null;
   return (
     <div className="fixed inset-0 bg-[#241D31] bg-opacity-80 flex justify-center items-center z-50">
       <div className="bg-white rounded-lg shadow-lg w-[90%] sm:w-[80%] lg:w-[650px] p-6">
@@ -14,7 +37,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             ✖
           </button>
         </div>
-        <form className="mt-4 space-y-4">
+        <form className="mt-4 space-y-4" ref={form} onSubmit={sendEmail}>
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Name
@@ -23,6 +46,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               type="text"
               placeholder="Your Name"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="full_name"
             />
           </div>
           <div>
@@ -33,13 +57,17 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
               type="email"
               placeholder="Your Email"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="user_email"
             />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Service Needed
             </label>
-            <select className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500">
+            <select
+              className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="service_needed"
+            >
               <option>Select a service</option>
               {[
                 'Mobile & Web Development',
@@ -60,6 +88,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             <input
               type="date"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="date"
             />
           </div>
           <div>
@@ -69,6 +98,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             <input
               type="time"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="time"
             />
           </div>
           <div>
@@ -78,6 +108,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             <textarea
               placeholder="Your Note"
               className="w-full border border-gray-300 outline-0 rounded-lg p-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+              name="message"
             ></textarea>
           </div>
           <button
@@ -86,6 +117,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
           >
             Complete Reservation &gt;
           </button>
+          <p className="text-white ml-auto text-sm sm:text-base">{emailSent}</p>
         </form>
       </div>
     </div>
