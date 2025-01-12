@@ -3,26 +3,27 @@ import tekktopia from '../assets/images/tekktopia.png'
 export default function Footer() {
   // Array of links and contact info
   const companyLinks = [
-    { text: 'About Us', href: '#' },
-    { text: 'Services', href: '#' },
-    { text: 'Our Project', href: '#' },
-    { text: 'Blog', href: '#' },
-    { text: 'Careers', href: '#' },
+    { text: 'About Us', href: '/about' },
+    { text: 'Services', href: '/services' },
+    { text: 'Our Team', href: '/our-team' },
+    { text: 'Blog', href: '/Blog' },
+    { text: 'Careers', href: '/Career' },
   ];
 
   const productLinks = [{ text: "Let's Gidi", href: '#' }];
 
   const socialLinks = [
     { text: 'LinkedIn', href: 'https://www.linkedin.com/company/tekktopia/' },
-    { text: 'Facebook', href: '#' },
+    { text: 'Thread', href: 'https://www.threads.net/@tekktopia?igshid=NTc4MTIwNjQ2YQ==' },
     { text: 'Instagram', href: 'https://www.instagram.com/tekktopia?igsh=MXJramZicW80eDV0eQ==' },
-    { text: 'Twitter', href: '#' },
+    { text: 'Twitter', href: 'https://x.com/tekktopia30385?s=21&t=fcOLORW_YEXpNc1TDIRvEA' },
   ];
 
   const contactInfo = [
-    { text: '+234 809 414 0706' },
-    { text: '+234 902 254 2963' },
-    { text: 'support@tekktopia.com' },
+    { text: '+234 815 433 2992', href:"tel:" },
+    { text: '+234 909 330 9638',href:"tel:"  },
+    { text: '+234  810 596 3769',href:"tel:"  },
+    { text: 'message@tekktopia.com',href:"mailto:"  },
   ];
 
   return (
@@ -98,7 +99,7 @@ export default function Footer() {
                 {contactInfo.map((link, index) => (
                   <div key={index} className="mb-[16px]">
                     <a
-                      href={link.href}
+                      href={link.href+link.text}
                       className="text-[16px] font-extralight hover:text-[#f5901f] lg:text-[14px]"
                     >
                       {link.text}
