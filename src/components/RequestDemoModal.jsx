@@ -117,7 +117,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
           >
             Complete Reservation &gt;
           </button>
-          <p className="text-white ml-auto text-sm sm:text-base">{emailSent}</p>
+          <p className="ml-auto text-sm sm:text-base">{emailSent}</p>
         </form>
       </div>
     </div>
