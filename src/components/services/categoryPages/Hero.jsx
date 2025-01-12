@@ -8,7 +8,7 @@ const Hero = ({ imageUrl, topText, bottomText, subtitle }) => {
         alt="hero"
         className="w-full h-[450px] sm:h-[650px] object-cover"
       />
-      <div className="absolute text-white text-left left-4 sm:left-[80px] top-[204px] font-medium ">
+      <div className="absolute text-white text-left left-4 sm:left-[80px] top-[204px] sm:top-[150px] lg:top-[150px] font-medium ">
         <h1 className="text-[24px] sm:text-[36px] lg:text-[60px]">
           {topText}
           <br />

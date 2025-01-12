@@ -36,8 +36,8 @@ const blogData = [
   },
   {
     title:
-      'How to deal with Big Tech power? The “ Big Tech Rah”, a new form of biopower in the digital age',
-    author: 'Ire Adeoluwa',
+      'How to deal with Big Tech power? The “ Big Tech Raj”, a new form of biopower in the digital age',
+    author: 'Leclercq-Vandelannoitte',
     date: 'March 21, 2024',
     image: '/tech-rah-blog.png', // Adjust the path to your asset location
     description:
