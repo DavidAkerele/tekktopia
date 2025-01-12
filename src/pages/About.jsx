@@ -5,7 +5,7 @@ import CompanyEthos from '../components/About/companyEthos/CompanyEthos';
 
 const About = () => {
   return (
-    <section className="w-full flex-col flex items-center justify-center mt-16 md:mt-44">
+    <section className="w-full flex-col flex items-center justify-center mt-16 ">
       {/* First about section */}
       <div className="relative w-full">
         {/* Background Image */}
