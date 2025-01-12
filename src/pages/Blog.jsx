@@ -61,9 +61,9 @@ function Blog() {
             },
             {
               image: 'article4.png',
-              id: 7,
+              id: 8,
               title:
-                'How tech companies advance sustainability through artificial intelligence ',
+                'Moving beyond the predictable failure of  Ed-Tech initiatives',
             },
           ].map((article, index) => (
             <Link
