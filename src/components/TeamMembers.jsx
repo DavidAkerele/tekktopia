@@ -9,7 +9,7 @@ export default function TeamMembers() {
       name: 'AKINOLA DANIEL OSHINUBI',
       imageUrl: '/daniel-oshinubi.png',
       role: 'Founder & MD/CEO',
-      linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
+      linkedIn: 'https://www.linkedin.com/in/akinolaoshinubi/',
     },
     {
       name: 'BOLUWATIFE ONI',
