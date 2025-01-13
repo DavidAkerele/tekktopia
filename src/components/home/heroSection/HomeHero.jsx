@@ -69,7 +69,7 @@ const HomeHero = ({ setIsModalOpen }) => {
             <div className="ml-[12px]">
               <div className="text-[14px]">Akinola Daniel Oshinubi</div>
               <div className="text-[12px] text-[#697D95B2] mt-[4px]">
-                Founder & MD Tekktopia
+                Chief Executive Officer
               </div>
             </div>
           </div>

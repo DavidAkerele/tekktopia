@@ -14,7 +14,7 @@ export default function TeamMembers() {
     {
       name: 'BOLUWATIFE ONI',
       imageUrl: '/tife-oni.png',
-      role: 'Head, Sales & Business Devel...',
+      role: 'Head, Sales & Business Development',
       linkedIn: 'https://www.linkedin.com/in/ireoluwa-adesanya-8b5b9b1b4/',
     },
     {
